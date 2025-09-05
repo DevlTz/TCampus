@@ -1,0 +1,9 @@
+Django>=4.2
+djangorestframework
+black
+flake8
+pylint
+radon
+pytest
+coverage
+

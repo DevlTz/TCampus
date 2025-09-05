@@ -1,0 +1,75 @@
+BPP — Boas Práticas de Programação
+Licenciamento unificado (versão adaptada)
+
+DATA: 2025-09-05
+
+Resumo executivo
+---------------
+- Código-fonte (software): licenciado sob a **Business Source License 1.1 (BSL 1.1)**.
+  **Change Date (data de conversão para licença permissiva): 2029-09-05.**
+- Documentação (guias, PDFs, material didático): licenciada sob **Creative Commons
+  Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
+- Histórico de licenciamento: versões/commits anteriores a 2025-09-05 podem ter sido
+  distribuídas sob **Apache License 2.0** — o texto completo está incluído em
+  'APACHE-2.0-HEADER.md' para referência.
+
+IMPORTANTE — Aviso legal
+-----------------------
+Isto é um resumo e arquivo de conveniência. Para termos legais completos consulte os
+textos oficiais das licenças referenciadas. Este documento não substitui
+assessoramento jurídico.
+
+1) Licença do Código — Business Source License 1.1 (BSL 1.1) — resumo e termos
+----------------------------------------------------------------------------
+Copyright (c) 2025 — Autores do projeto BPP
+
+Sob a BSL 1.1 (resumo):
+- O código-fonte é **source-available** (o repositório expõe o código).
+- O uso, reprodução, modificação e distribuição podem ser **restritos** para
+  determinados usos comerciais até a *Change Date* (2029-09-05).
+- Após a Change Date, o código será relicenciado automaticamente sob uma
+  licença permissiva conforme definido pelo texto completo do BSL.
+- Contribuições submetidas ao repositório serão consideradas feitas sob os
+  termos do BSL (a menos que explicitamente acordado de outra forma).
+- Para solicitar licença comercial ou uso não coberto pelas condições da BSL,
+  entre em contato com os mantenedores (ver AUTHORS.md).
+
+OBS.: O texto completo e juridicamente vinculante do BSL 1.1 não está incluído
+neste resumo. Recomendamos colar o texto oficial do BSL 1.1 no repositório (ou um
+link direto) e consultar assessoria jurídica caso vá negociar licenciamento.
+
+2) Licença da Documentação — CC BY-NC-SA 4.0 (resumo)
+----------------------------------------------------
+Todos os materiais de documentação (arquivos em docs/, PDFs, guias pedagógicos)
+estão licenciados sob **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**.
+
+Resumo dos direitos e deveres:
+- Você pode copiar, adaptar e redistribuir os materiais.
+- Deve atribuir os autores (dar crédito).
+- **Não pode** usar os materiais para fins comerciais sem permissão.
+- Se publicar adaptações, deve fazê-lo sob a mesma licença (ShareAlike).
+
+3) Contribuições (policy)
+--------------------------
+Ao submeter Pull Requests, Issues ou qualquer Contribution ao repositório, o
+Contribuidor concorda que sua contribuição será licenciada e distribuída sob
+os termos aplicáveis aqui (BSL para código, CC BY-NC-SA para documentação),
+salvo acordo por escrito em contrário.
+
+4) NOTICE e atribuições
+-----------------------
+Se este projeto fornecer um arquivo NOTICE, qualquer redistribuição de Derivative
+Works deverá incluir o conteúdo relevante do NOTICE conforme requerido pela
+licença aplicável (veja requisitos específicos do BSL/Apache em caso de arquivos
+herdados por Apache).
+
+5) Histórico / Apache License 2.0 (Apêndice)
+--------------------------------------------
+As versões do projeto publicadas anteriormente sob **Apache License 2.0**
+permitem que determinados artefatos (ou forks realizados sob Apache previamente)
+sejam tratados conforme os termos do Apache 2.0. Para transparência, o texto
+completo da Apache License 2.0 está incluído no arquivo 'APACHE-2.0-HEADER.md'
+e aplica-se apenas aos arquivos/versões explicitamente marcados como
+licenciados sob Apache 2.0.
+
+---
