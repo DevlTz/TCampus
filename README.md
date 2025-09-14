@@ -3,9 +3,9 @@
 [![license](https://img.shields.io/badge/license-BSL--1.1-orange)](LICENSE)
 [![tests](https://img.shields.io/badge/tests-passing-lightgrey)](https://github.com/)
 
-# BPP — Boas Práticas de Programação (MVP)
+# Boas Práticas de Programação (MVP)
 
-BPP — MVP em **Django / Python** focado em código limpo, testes, métricas de qualidade e documentação de refatorações.  
+Boas Práticas de Programação — MVP em **Django / Python** focado em código limpo, testes, métricas de qualidade e documentação de refatorações.  
 **Licença:** Código sob *Business Source License (BSL 1.1)* — uso comercial restrito; documentação sob *CC BY-NC-SA 4.0*.
 
 ---
@@ -25,7 +25,7 @@ BPP — MVP em **Django / Python** focado em código limpo, testes, métricas de
 ---
 
 ## Sobre
-Repositório para a disciplina **Boas Práticas de Programação (BPP)**. Objetivo: desenvolver um MVP completo em Django com ênfase em:
+Repositório para a disciplina **Boas Práticas de Programação**. Objetivo: desenvolver um MVP completo em Django com ênfase em:
 - código limpo e legível;
 - identificação e registro de *code smells*;
 - refatorações documentadas (before/after);
