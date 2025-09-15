@@ -106,7 +106,7 @@ Mantenha cobertura de testes nos módulos críticos e registre métricas de cobe
 
 ---
 
-## Estrutura sugerida do repositório / Seguindo o PDF do Professor
+## Estrutura sugerida do repositório
 
 ```
 bpp-mvp/
