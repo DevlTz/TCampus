@@ -4,6 +4,10 @@ set -euo pipefail
 echo "Rodando o formatador de código (black)..."
 black --check . || true
 
+vulture --version || true
+echo "Rodando o Vulture..."
+vulture . || true
+
 echo "Rodando o Flake8"
 flake8 || true
 
