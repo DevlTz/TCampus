@@ -36,7 +36,7 @@ Repositório para a disciplina **Boas Práticas de Programação**. Objetivo: de
 ## Tecnologias
 - Python 3.10+  
 - Django (versão indicada em `requirements.txt`)  
-- Ferramentas de qualidade: Black, Flake8, Pylint, Radon  
+- Ferramentas de qualidade: Black, Flake8, Pylint, Radon, Vulture
 - Testes: pytest / Django test runner  
 - CI: template em `.github/workflows/ci.yml`
 
@@ -81,7 +81,7 @@ python manage.py runserver
 ## Qualidade de código
 Scripts e recomendações para manter padrão de qualidade:
 
-- `tools/run-quality.sh` — executa checks: `black --check`, `flake8`, `pylint`, `radon cc` e `pytest`.
+- `tools/run-quality.sh` — executa checks: `black --check`, `flake8`, `pylint`, `radon cc`, `pytest` e `vulture` .
 - Configure o CI (`.github/workflows/ci.yml`) para rodar esses checks em PRs.
 - Use `pre-commit` (opcional) para aplicar `black` e `isort` automaticamente.
 
