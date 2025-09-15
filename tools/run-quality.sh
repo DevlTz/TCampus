@@ -10,7 +10,10 @@ CYAN='\033[0;36m'
 NC='\033[0m' 
 
 echo "Diretório analisado: $CODE_DIR"
-ls "$CODE_DIR"
+if [ ! -d "$CODE_DIR" ]; then
+    echo -e "${RED}Erro: O diretório $CODE_DIR não existe.${NC}"
+    exit 1
+fi
 
 echo -e "${CYAN}==> Rodando Black (formatador) em $CODE_DIR...${NC}"
 black --check --diff "$CODE_DIR" || echo -e "${YELLOW}Black encontrou arquivos não formatados!${NC}"
