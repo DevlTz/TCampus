@@ -1,0 +1,10 @@
+# Qualidade de Código e Formatação
+black
+flake8
+pylint
+radon
+
+# Testes
+pytest
+coverage
+vulture

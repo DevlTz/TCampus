@@ -1,29 +1,43 @@
-# Python
-__pycache__/
+# Ambientes Virtuais e Dependências
+# Ignora pastas de ambientes virtuais comuns e arquivos de variáveis de ambiente.
+.venv/
+venv/
+.env
+.eggs/
+instance/
+
+# Arquivos Python
+# Ignora caches, logs e pacotes de distribuição gerados pelo Python.
+**/__pycache__/
 *.py[cod]
 *.egg-info/
 dist/
 build/
-.eggs/
-*.sqlite3
-.env
-.venv/
-venv/
-instance/
-.coverage
-htmlcov/
+*.log
 
 # Django
-*.log
-local_settings.py
+# Ignora arquivos de banco de dados, configurações locais e pastas de mídia.
+*.sqlite3
 db.sqlite3
+local_settings.py
 media/
 
-# VSCode / IDEs
+# Testes
+# Ignora arquivos e pastas gerados por ferramentas de teste como pytest e coverage.
+.coverage
+htmlcov/
+.pytest_cache
+
+# IDEs e Editores de Código
+# Ignora arquivos de configuração específicos de editores.
 .vscode/
 .idea/
 
-# OS
+# Sistema Operacional
+# Ignora arquivos de metadados gerados pelo macOS e Windows.
 .DS_Store
 Thumbs.db
 
+# Específico do Projeto
+# Adicione aqui arquivos ou pastas específicas do seu projeto.
+...

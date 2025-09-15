@@ -1,9 +1,25 @@
-Django>=4.2
-djangorestframework
-black
-flake8
-pylint
-radon
-pytest
-coverage
+# Framework e Extensões
+Django==5.2
+djangorestframework==3.16.0
+django-filter==25.1
+djangorestframework_simplejwt==5.5.0
+asgiref==3.8.1
+sqlparse==0.5.3
+tzdata==2025.2
 
+# Banco de Dados
+psycopg2-binary==2.9.10
+
+# Utilitários e Segurança
+python-decouple==3.8
+python-dotenv==1.1.0
+bcrypt==4.3.0
+cryptography==44.0.2
+PyJWT==1.7.1  # Dependência do djangorestframework-jwt, se ainda o usar
+djangorestframework-jwt==1.11.0 # OBS: Considere usar apenas o simplejwt
+Markdown==3.8
+pillow==11.2.1
+
+# Dependências transitivas (geralmente não precisam ser listadas, mas mantendo por consistência)
+cffi==1.17.1
+pycparser==2.22
