@@ -169,7 +169,7 @@ TCampus/
 │  ├─ docker-compose.yml
 │  ├─ manage.py
 └─ tools/
-   └─ run-quality.sh```
+   └─ run-quality.sh
 
 ---
 
