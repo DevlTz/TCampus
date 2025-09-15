@@ -170,7 +170,7 @@ TCampus/
 │  ├─ manage.py
 └─ tools/
    └─ run-quality.sh
-
+```
 ---
 
 ## Contribuição
