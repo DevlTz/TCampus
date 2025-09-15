@@ -134,3 +134,4 @@ class StatusUser(APIView):
             "total_following": user.total_following,
         }
         return Response(status)
+    
