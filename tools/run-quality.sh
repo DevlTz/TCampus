@@ -1,25 +1,36 @@
 #!/usr/bin/env bash
 set -euo pipefail
+# Allow CODE_DIR to be set via environment variable or first command-line argument, fallback to default
+CODE_DIR="${CODE_DIR:-${1:-../src/djangoproject/}}"
 
-echo "Rodando o formatador de código (black)..."
-black --check . || true
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m' 
 
-echo "Checking vulture version..."
-vulture --version || true
-echo "Rodando o Vulture..."
-vulture . || true
+echo "Diretório analisado: $CODE_DIR"
+if [ ! -d "$CODE_DIR" ]; then
+    echo -e "${RED}Erro: O diretório $CODE_DIR não existe.${NC}"
+    exit 1
+fi
 
-echo "Rodando o Flake8"
-flake8 || true
+echo -e "${CYAN}==> Rodando Black (formatador) em $CODE_DIR...${NC}"
+black --check --diff "$CODE_DIR" || echo -e "${YELLOW}Black encontrou arquivos não formatados!${NC}"
 
-echo "Rodando o Pylint para testes - Vai demorar"
-pylint --rcfile=.pylintrc || true
+echo -e "${CYAN}==> Rodando Vulture (código morto) em $CODE_DIR...${NC}"
+vulture "$CODE_DIR" || echo -e "${YELLOW}Vulture encontrou código não utilizado!${NC}"
 
-echo "Rodando o Cyclomatic Complexity (radon)..."
-radon cc -s . || true
+echo -e "${CYAN}==> Rodando Flake8 (linter) em $CODE_DIR...${NC}"
+flake8 "$CODE_DIR" || echo -e "${RED}Flake8 encontrou problemas!${NC}"
 
-echo "Rodando testes especificos (pytest)..."
-pytest || true
+echo -e "${CYAN}==> Rodando Pylint em $CODE_DIR...${NC}"
+pylint --rcfile=.pylintrc "$CODE_DIR" || echo -e "${RED}Pylint encontrou problemas!${NC}"
 
-echo "Done."
+echo -e "${CYAN}==> Rodando Radon (complexidade ciclomática) em $CODE_DIR...${NC}"
+radon cc -s "$CODE_DIR" || echo -e "${YELLOW}Radon encontrou funções complexas!${NC}"
 
+echo -e "${CYAN}==> Rodando Pytest em $CODE_DIR...${NC}"
+pytest "$CODE_DIR" || echo -e "${RED}Alguns testes falharam!${NC}"
+
+echo -e "${GREEN}Análise de qualidade finalizada! Veja os avisos acima para detalhes.${NC}"
