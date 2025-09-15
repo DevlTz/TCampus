@@ -117,8 +117,21 @@ class UnfollowUserView(APIView):
             user_to_unfollow.total_followers -= 1
             user_unfollowing.save()
             user_to_unfollow.save()
-
+ 
             return Response(f"The user {user_unfollowing.username} unfollowed {target_username}", status= 200)
         
         except Exception as e:
             return Response({"error": str(e)}, status=400)
+
+class StatusUser(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        status = {
+            "username": user.username,
+            "total_followers": user.total_followers,
+            "total_following": user.total_following,
+        }
+        return Response(status)
+    
