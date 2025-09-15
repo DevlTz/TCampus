@@ -36,6 +36,8 @@ Repositório para a disciplina **Boas Práticas de Programação**. Objetivo: de
 ## Tecnologias
 - Python 3.10+  
 - Django (versão indicada em `requirements.txt`)  
+- JWT
+- Docker
 - Ferramentas de qualidade: Black, Flake8, Pylint, Radon, Vulture
 - Testes: pytest / Django test runner  
 - CI: template em `.github/workflows/ci.yml`
@@ -46,8 +48,8 @@ Repositório para a disciplina **Boas Práticas de Programação**. Objetivo: de
 
 ```bash
 # clonar o repositório
-git clone https://github.com/DevlTz/BPP_MVP.git bpp-mvp
-cd bpp-mvp
+git clone https://github.com/DevlTz/TCampus.git
+cd TCampus
 
 # criar ambiente virtual
 python -m venv .venv
@@ -55,7 +57,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 # instalar dependências
-pip install -r requirements.txt
+pip install -r requirements.txt -r requirements-dev.txt
 ```
 ---
 
@@ -106,32 +108,68 @@ Mantenha cobertura de testes nos módulos críticos e registre métricas de cobe
 
 ---
 
-## Estrutura sugerida do repositório
+## Estrutura do repositório
 
 ```
-bpp-mvp/
+TCampus/
+├─ .gitignore
+├─ APACHE-2.0-HEADER.md
+├─ AUTHORS.md
+├─ CONTRIBUTING.md
 ├─ LICENSE                # BSL 1.1 (código)
 ├─ LICENSE-DOCS           # CC BY-NC-SA 4.0 (documentação)
+├─ NOTICE
 ├─ README.md
-├─ requirements.txt
-├─ .gitignore
-├─ src/
-│  ├─ manage.py
-│  └─ project_name/
-├─ apps/
-├─ tests/
-├─ docs/
-│  ├─ vision.md
-│  ├─ backlog.md
-│  └─ quality-metrics.md
 ├─ refactoring/
 │  ├─ code-smells-identified.md
 │  └─ refactoring-log.md
-├─ tools/
-│  └─ run-quality.sh
-└─ .github/
-   └─ workflows/ci.yml
-```
+│  └─ docs/
+│  │  ├─ Arq_Diagram.png
+│  │  ├─ ERD_Diagram.png
+├─ requirements.txt
+├─ requirements-dev.txt
+├─ src/
+│  ├─ .gitignore
+│  ├─ Dockerfile
+│  ├─ djangoproject/
+│  │  ├─ djangoproject/
+│  │  │  ├─ __init__.py
+│  │  │  ├─ asgi.py
+│  │  │  ├─ settings.py
+│  │  │  ├─ urls.py
+│  │  │  └─ wsgi.py
+│  │  ├─ manage.py
+│  │  ├─ posts/
+│  │  │  ├─ __init__.py
+│  │  │  ├─ admin.py
+│  │  │  ├─ apps.py
+│  │  │  ├─ migrations/
+│  │  │  │  ├─ 0001_initial.py
+│  │  │  │  ├─ ...
+│  │  │  │  └─ __init__.py
+│  │  │  ├─ models.py
+│  │  │  ├─ serializers.py
+│  │  │  ├─ tests.py
+│  │  │  ├─ urls.py
+│  │  │  └─ views.py
+│  │  └─ users/
+│  │     ├─ __init__.py
+│  │     ├─ admin.py
+│  │     ├─ apps.py
+│  │     ├─ migrations/
+│  │     │  ├─ 0001_initial.py
+│  │     │  ├─ 0002_auto_...
+│  │     │  ├─ ...
+│  │     │  └─ 0007_alter_user_managers.py
+│  │     ├─ models.py
+│  │     ├─ serializers.py
+│  │     ├─ tests.py
+│  │     ├─ urls.py
+│  │     └─ views.py
+│  ├─ docker-compose.yml
+│  ├─ manage.py
+└─ tools/
+   └─ run-quality.sh
 
 ---
 
