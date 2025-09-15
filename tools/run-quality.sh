@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
-CODE_DIR="../src/djangoproject/"
+# Allow CODE_DIR to be set via environment variable or first command-line argument, fallback to default
+CODE_DIR="${CODE_DIR:-${1:-../src/djangoproject/}}"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
