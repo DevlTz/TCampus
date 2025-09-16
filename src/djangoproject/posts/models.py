@@ -24,14 +24,17 @@ class Posts(models.Model):
         return f"{self.id} has {self.likes} likes"
 
 class Event(models.Model):
-    title = models.CharField("Título: ", max_length=255)
-    date_evento = models.DateTimeField("Data e hora do evento")
-    local = models.CharField("Local / link", max_length=512)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="events")
-    created_at = models.DateTimeField(auto_now_add=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField("Title: ", max_length=255)
+    event_date = models.DateTimeField("Event Date and Time:")
+    locate = models.CharField(max_length=512)
+    postedAt = models.DateTimeField(auto_now_add=True, editable=False)
+    postedBy = models.ForeignKey(User, on_delete=models.CASCADE, related_name="events_postedBy", editable=False)
     
+    objects= models.Manager()
+
     class Meta:
-        ordering = ["-date_evento"]  
+        ordering = ["-event_date"]  
 
     def __str__(self):
-        return f"{self.title} — {self.date_evento:%Y-%m-%d %H:%M}"
+        return f"{self.title} — {self.event_date:%Y-%m-%d %H:%M}"
