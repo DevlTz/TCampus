@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.utils import timezone
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
-from .models import *
+from .models import Posts, Event
 from users.models import User
 
 class PostsSerializer(serializers.ModelSerializer):
