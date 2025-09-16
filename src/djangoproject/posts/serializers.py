@@ -34,8 +34,8 @@ class PostsSerializer(serializers.ModelSerializer):
 
 class EventsSerializer(serializers.ModelSerializer):
     # show the id of author and name (we can take this off - but i'll let now guys)
-    author_id = serializers.PrimaryKeyRelatedField(source="author", read_only=True)
-    author_name = serializers.CharField(source="author.get_full_name", read_only=True)
+    author_id = serializers.PrimaryKeyRelatedField(source="postedBy", read_only=True)
+    author_name = serializers.CharField(source="postedBy.get_full_name", read_only=True)
 
     class Meta:
         model = Event
