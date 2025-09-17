@@ -44,8 +44,6 @@
 - **Ferramenta**: vultures
 - **Status**: Esperando correção
 
-Code Smells Adicionais (Baseado no seu Relatório pylint)
-
 # 4. Duplicate Code
 
 - **Arquivo**: src/djangoproject/posts/views.py E src/djangoproject/users/views.py
