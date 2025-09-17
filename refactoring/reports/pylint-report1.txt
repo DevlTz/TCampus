@@ -157,7 +157,7 @@ src/djangoproject/posts/views.py:12:0: C0115: Missing class docstring (missing-c
 src/djangoproject/posts/views.py:15:4: C0116: Missing function or method docstring (missing-function-docstring)
 src/djangoproject/posts/views.py:26:0: C0115: Missing class docstring (missing-class-docstring)
 src/djangoproject/posts/views.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
-src/djangoproject/posts/views.py:45:15: W0718: Catching too general exception Exception (broad-exception-caught)
+src/djangoproject/posts/views.py:45:15: W0718: Catching too general exception Exception (broad-exception-caught)  ((Code Smell (Autor: Caio Trindade)))
 src/djangoproject/posts/views.py:48:0: C0115: Missing class docstring (missing-class-docstring)
 src/djangoproject/posts/views.py:51:4: C0116: Missing function or method docstring (missing-function-docstring)
 src/djangoproject/posts/views.py:67:15: W0718: Catching too general exception Exception (broad-exception-caught)
