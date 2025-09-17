@@ -44,14 +44,6 @@
 - **Ferramenta**: vultures
 - **Status**: Esperando correção
 
-Excelente! Você já tem o relatório bruto, já começou a documentar e agora está na etapa mais importante: interpretar os resultados e selecionar os code smells mais relevantes para o relatório.
-
-Você está no caminho certíssimo. Seu instinto de focar nos arquivos de código (views.py, serializers.py, models.py) e nos avisos W e R do pylint é exatamente o que o professor espera.
-
-Vamos usar os exemplos que você já criou como base e adicionar mais alguns, extraídos diretamente do seu pylint-report.txt, para que você tenha um catálogo robusto e bem fundamentado.
-
-Aqui estão mais 3 code smells de alto impacto que você pode adicionar ao seu code-smells-identified.md.
-
 Code Smells Adicionais (Baseado no seu Relatório pylint)
 
 # 4. Duplicate Code
