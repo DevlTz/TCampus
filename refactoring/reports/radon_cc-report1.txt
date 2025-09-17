@@ -1,0 +1,74 @@
+src/djangoproject/manage.py
+    F 7:0 main - A (2)
+src/djangoproject/users/apps.py
+    C 4:0 UsersConfig - A (1)
+src/djangoproject/users/admin.py
+    C 6:0 UserAdmin - A (1)
+src/djangoproject/users/models.py
+    C 5:0 User - A (2)
+    M 15:4 User.__str__ - A (1)
+src/djangoproject/users/views.py
+    C 62:0 FollowUserView - A (5)
+    C 95:0 UnfollowUserView - A (5)
+    M 64:4 FollowUserView.patch - A (4)
+    M 98:4 UnfollowUserView.patch - A (4)
+    C 37:0 CreateUserView - A (3)
+    C 12:0 UsersOperationsView - A (2)
+    M 21:4 UsersOperationsView.patch - A (2)
+    M 39:4 CreateUserView.post - A (2)
+    C 50:0 ListAllUsersView - A (2)
+    C 126:0 StatusUser - A (2)
+    M 15:4 UsersOperationsView.get - A (1)
+    M 30:4 UsersOperationsView.delete - A (1)
+    M 52:4 ListAllUsersView.get - A (1)
+    C 58:0 MyTokenObtainPairView - A (1)
+    M 129:4 StatusUser.get - A (1)
+src/djangoproject/users/serializers.py
+    C 9:0 MyTokenObtainPairSerializer - A (2)
+    C 24:0 UserSerializer - A (2)
+    M 13:4 MyTokenObtainPairSerializer.get_token - A (1)
+    M 43:4 UserSerializer.create - A (1)
+src/djangoproject/users/migrations/0005_alter_posts_text.py
+    C 6:0 Migration - A (1)
+src/djangoproject/users/migrations/0004_alter_posts_text.py
+    C 6:0 Migration - A (1)
+src/djangoproject/users/migrations/0001_initial.py
+    C 12:0 Migration - A (1)
+src/djangoproject/users/migrations/0003_alter_posts_image_alter_posts_text.py
+    C 7:0 Migration - A (1)
+src/djangoproject/users/migrations/0006_delete_posts.py
+    C 6:0 Migration - A (1)
+src/djangoproject/users/migrations/0002_alter_posts_image_alter_posts_text.py
+    C 7:0 Migration - A (1)
+src/djangoproject/users/migrations/0007_alter_user_managers.py
+    C 7:0 Migration - A (1)
+src/djangoproject/posts/apps.py
+    C 4:0 PostsConfig - A (1)
+src/djangoproject/posts/admin.py
+    C 6:0 PostsAdmin - A (1)
+src/djangoproject/posts/models.py
+    C 11:0 Posts - A (2)
+    C 26:0 Event - A (2)
+    M 23:4 Posts.__str__ - A (1)
+    M 39:4 Event.__str__ - A (1)
+src/djangoproject/posts/views.py
+    C 26:0 LikePostView - A (4)
+    C 48:0 UnlikePostView - A (4)
+    C 12:0 CreatePostView - A (3)
+    M 29:4 LikePostView.patch - A (3)
+    M 51:4 UnlikePostView.patch - A (3)
+    M 15:4 CreatePostView.post - A (2)
+    C 70:0 FeedView - A (2)
+    M 73:4 FeedView.get_queryset - A (1)
+src/djangoproject/posts/serializers.py
+    C 8:0 PostsSerializer - A (3)
+    C 35:0 EventsSerializer - A (3)
+    M 19:4 PostsSerializer.validate_image - A (2)
+    M 45:4 EventsSerializer.validate_event_date - A (2)
+    M 51:4 EventsSerializer.validate_locate - A (2)
+    M 26:4 PostsSerializer.create - A (1)
+src/djangoproject/posts/migrations/0001_initial.py
+    C 10:0 Migration - A (1)
+
+52 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.9230769230769231)
