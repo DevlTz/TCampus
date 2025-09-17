@@ -1,0 +1,13 @@
+before-after-examples/ - Pasta com exemplos práticos:
+before-after-examples/
+|-- long-method-refactor/
+|-- before.py
+|-- after.py
+|-- explanation.md
+|-- duplicate-code-elimination/
+|-- before_auth.py
+|-- before_profile.py
+|-- after_shared_validator.py
+|-- explanation.md
+
+-> acessar o material do professor para mais detalhes
