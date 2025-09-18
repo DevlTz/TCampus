@@ -22,7 +22,7 @@ class UsersOperationsView(APIView):
 
     def patch(self, request):
         user = request.user
-        serializer = UserSerializer(user, data=request0.data, partial=True)
+        serializer = UserSerializer(user, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
