@@ -3,8 +3,7 @@ from . import views
 
 urlpatterns = [
     path('post', views.CreatePostView.as_view()),
-    path('like', views.LikePostView.as_view()),
-    path('unlike', views.UnlikePostView.as_view()),
+    path('toggle-like', views.toggle_post_like()),
     path('feed', views.FeedView.as_view())
    
 ]
