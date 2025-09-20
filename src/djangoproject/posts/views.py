@@ -138,7 +138,7 @@ class EventCreateAPIView(generics.CreateAPIView):
             serializer.save(postedBy=self.request.user)
 
 class EventListAPIView(generics.ListAPIView):
-        queryset = Events.objects.all().order_by('-created_at')
+        queryset = Events.objects.all().order_by('-postedAt')
         serializer_class = EventsSerializer
         permission_classes = [IsAuthenticated]
 
