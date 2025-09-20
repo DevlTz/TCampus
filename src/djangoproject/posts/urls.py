@@ -2,11 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('post/', views.CreatePostView.as_view(), name='post-create'),
-    path('like/', views.LikePostView.as_view(), name='post-like'),
-    path('unlike/', views.UnlikePostView.as_view(), name='post-unlike'),
-    path('feed/', views.FeedView.as_view(), name='feed'),
-
+    path('post', views.CreatePostView.as_view()),
+    path('toggle-like', views.ToggleLikePostView.as_view()),
+    path('feed', views.FeedView.as_view())
     # Events endpoints (plural path)
     path('events/', views.EventListAPIView.as_view(), name='events-list'),       # GET list
     path('events/create/', views.EventCreateAPIView.as_view(), name='events-create'),  # POST create

@@ -31,7 +31,7 @@
 - **Recomendação**: Especificar o tipo de exceção, por exemplo ValidationError do DRF ou Posts.DoesNotExist.
 - **Severidade**: Alta
 - **Ferramenta**: Pylint
-- **Status**: Esperando Correção
+- **Status**: Corrigido
 
 # 3. Dead Code
 
@@ -60,7 +60,7 @@
 
 - **Ferramenta:** Análise Manual (apoiada pela identificação de Pylint R0801 em outros locais, que levanta a suspeita).
 
-- **Status:** Esperando Correção
+- **Status:** Corrigido
 
 # 5. Data Class / "Classe com Poucos Métodos Públicos"
 
@@ -78,7 +78,7 @@
 
 - **Ferramenta:** Pylint (R0903)
 
-- **Status:** Esperando Correção
+- **Status:** Este smell foi corrigido pela mesma refatoração aplicada para o Smell #4 (Criação da Camada de Serviço), que moveu a lógica de negócio das Views para os Services, aplicando o Single Responsibility Principle (SRP)
 
 # 6. Argumento de Função Não Utilizado
 
