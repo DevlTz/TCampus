@@ -108,7 +108,7 @@ class FeedView(ListAPIView):
                 "sort_date": p.get("postedAt") or p.get("created_at"),
                 "data": p
             })
-            # adding posts to normalized list
+            # adding events to normalized list
         for e in events_data:
             normalized.append({
                 "type": "event",
