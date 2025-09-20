@@ -171,10 +171,3 @@ class EventDeleteAPIView(generics.DestroyAPIView):
                 raise PermissionDenied("You do not have permission to delete this event.")
             instance.delete()
 
-
-   # def get_queryset(self):
-       # user = self.request.user
-    #    posts = Posts.objects.filter(postedBy__in=user.following.all()).order_by('-postedAt')
-      #  return posts
-
-
