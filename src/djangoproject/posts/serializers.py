@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.utils import timezone
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
-from .models import Posts, Event
+from .models import Posts, Events
 from users.models import User
 
 class PostsSerializer(serializers.ModelSerializer):
@@ -30,17 +30,18 @@ class PostsSerializer(serializers.ModelSerializer):
                                   )
         post.save()
         return post
-    
 
 class EventsSerializer(serializers.ModelSerializer):
     # show the id of author and name (we can take this off - but i'll let now guys)
-    author_id = serializers.PrimaryKeyRelatedField(source="postedBy", read_only=True)
-    author_name = serializers.CharField(source="postedBy.get_full_name", read_only=True)
+    postedBy_id = serializers.PrimaryKeyRelatedField(source="postedBy", read_only=True)
+    postedBy_username = serializers.CharField(source="postedBy.get_full_name", read_only=True)
+    event_date = serializers.DateTimeField(required=True)
 
     class Meta:
-        model = Event
-        fields = ["id", "title", "event_date", "locate", "author_id", "author_name", "created_at"]
-        read_only_fields = ["id", "author_id", "author_name", "created_at"]
+        model = Events
+        fields = ["id", "title", "event_date", "locate", "postedBy_id", "postedBy_username", "postedAt"]
+        read_only_fields = ["id", "postedBy_id", "postedBy_username", "postedAt"]
+
 
     def validate_event_date(self, value):
         # doesn't allow old dates (old than now)
@@ -49,7 +50,7 @@ class EventsSerializer(serializers.ModelSerializer):
         return value
 
     def validate_locate(self, value):
-        # Pass both (text and url): valides if it is URL, otherwise allows text only
+        # Pass both (text and url): validates if it's URL, otherwise allows text only
         validator = URLValidator()
         try:
             validator(value)
