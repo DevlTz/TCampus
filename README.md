@@ -172,7 +172,6 @@ TCampus/
    └─ run-quality.sh
 ```
 ---
-'
 ## Contributing
 Contributions are welcome, but must follow these basic guidelines:
 
