@@ -3,112 +3,110 @@
 [![license](https://img.shields.io/badge/license-BSL--1.1-orange)](LICENSE)
 [![tests](https://img.shields.io/badge/tests-passing-lightgrey)](https://github.com/)
 
-# Boas Práticas de Programação (MVP)
+# Programming Best Practices (MVP)
 
-Boas Práticas de Programação — MVP em **Django / Python** focado em código limpo, testes, métricas de qualidade e documentação de refatorações.  
-**Licença:** Código sob *Business Source License (BSL 1.1)* — uso comercial restrito; documentação sob *CC BY-NC-SA 4.0*.
-
----
-
-## Índice
-- [Sobre](#sobre)  
-- [Tecnologias](#tecnologias)  
-- [Instalação rápida](#instalação-rápida)  
-- [Executando o projeto](#executando-o-projeto)  
-- [Qualidade de código](#qualidade-de-código)  
-- [Testes](#testes)  
-- [Estrutura sugerida do repositório](#estrutura-sugerida-do-repositório)  
-- [Contribuição](#contribuição)  
-- [Licença](#licença)  
-- [Contato / Licenciamento Comercial](#contato--licenciamento-comercial)
+Programming Best Practices — MVP in **Django / Python** focused on clean code, testing, quality metrics, and refactoring documentation.  
+**License:** Code under *Business Source License (BSL 1.1)* — restricted commercial use; documentation under *CC BY-NC-SA 4.0*.
 
 ---
 
-## Sobre
-Repositório para a disciplina **Boas Práticas de Programação**. Objetivo: desenvolver um MVP completo em Django com ênfase em:
-- código limpo e legível;
-- identificação e registro de *code smells*;
-- refatorações documentadas (before/after);
-- integração contínua com checks de qualidade.
+## Table of Contents
+- [About](#about)  
+- [Technologies](#technologies)  
+- [Quick Installation](#quick-installation)  
+- [Running the Project](#running-the-project)  
+- [Code Quality](#code-quality)  
+- [Testing](#testing)  
+- [Suggested Repository Structure](#suggested-repository-structure)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact / Commercial Licensing](#contact--commercial-licensing)
 
 ---
 
-## Tecnologias
+## About
+Repository for the **Programming Best Practices** course. Goal: develop a complete MVP in Django with emphasis on:
+- clean and readable code;
+- identification and logging of *code smells*;
+- documented refactorings (before/after);
+- continuous integration with quality checks.
+
+---
+
+## Technologies
 - Python 3.10+  
-- Django (versão indicada em `requirements.txt`)  
+- Django (version specified in `requirements.txt`)  
 - JWT
 - Docker
-- Ferramentas de qualidade: Black, Flake8, Pylint, Radon, Vulture
-- Testes: pytest / Django test runner  
-- CI: template em `.github/workflows/ci.yml`
+- Quality tools: Black, Flake8, Pylint, Radon, Vulture
+- Testing: pytest / Django test runner  
+- CI: template in `.github/workflows/ci.yml`
 
 ---
 
-## Instalação rápida
+## Quick Installation
 
 ```bash
-# clonar o repositório
+# clone the repository
 git clone https://github.com/DevlTz/TCampus.git
 cd TCampus
 
-# criar ambiente virtual
+# create virtual environment
 python -m venv .venv
 # macOS / Linux
 source .venv/bin/activate
 
-# instalar dependências
-pip install -r requirements.txt -r requirements-dev.txt
+# install dependencies
+pip install -r src/requirements.txt -r requirements-dev.txt
 ```
 ---
 
-## Executando o projeto
+## Running the Project
 
 ```bash
-# entrar na pasta src (onde estará o projeto Django)
+# enter the src folder (where the Django project will be)
 cd src
 
-# criar projeto Django (se ainda não existir)
-django-admin startproject project_name .
+# Docker compose 
+docker-compose up --build
 
-# criar app de exemplo
-python manage.py startapp core
+# apply migrations and run server
+docker-compose exec django-web python manage.py  makemigrations
+docker-compose exec django-web python manage.py migrate
 
-# aplicar migrações e rodar servidor
-python manage.py migrate
-python manage.py runserver
 ```
 
 ---
 
-## Qualidade de código
-Scripts e recomendações para manter padrão de qualidade:
+## Code Quality
+Scripts and recommendations to maintain code quality standards:
 
-- `tools/run-quality.sh` — executa checks: `black --check`, `flake8`, `pylint`, `radon cc`, `pytest` e `vulture` .
-- Configure o CI (`.github/workflows/ci.yml`) para rodar esses checks em PRs.
-- Use `pre-commit` (opcional) para aplicar `black` e `isort` automaticamente.
+- `tools/run-quality.sh` — runs checks: `black --check`, `flake8`, `pylint`, `radon cc`, `pytest`, and `vulture`.
+- Configure CI (`.github/workflows/ci.yml`) to run these checks on PRs.
+- Optionally use `pre-commit` to automatically apply `black` and `isort`.
 
-Exemplo (local):
+Example (local):
 ```bash
-# rodar script de qualidade
+# run quality script
 ./tools/run-quality.sh
 ```
 
 ---
 
-## Testes
+## Testing
 
 ```bash
-# rodar testes com pytest
+# run tests with pytest
 pytest
-# ou com o manage.py
+# or with manage.py
 python manage.py test
 ```
 
-Mantenha cobertura de testes nos módulos críticos e registre métricas de cobertura no CI.
+Maintain test coverage on critical modules and record coverage metrics in CI.
 
 ---
 
-## Estrutura do repositório
+## Repository Structure
 
 ```
 TCampus/
@@ -116,16 +114,18 @@ TCampus/
 ├─ APACHE-2.0-HEADER.md
 ├─ AUTHORS.md
 ├─ CONTRIBUTING.md
-├─ LICENSE                # BSL 1.1 (código)
-├─ LICENSE-DOCS           # CC BY-NC-SA 4.0 (documentação)
+├─ LICENSE                # BSL 1.1 (code)
+├─ LICENSE-DOCS           # CC BY-NC-SA 4.0 (documentation)
 ├─ NOTICE
 ├─ README.md
 ├─ refactoring/
+│  ├─ reports/
+│  ├─ before-after-examples/
 │  ├─ code-smells-identified.md
 │  └─ refactoring-log.md
 │  └─ docs/
-│  │  ├─ Arq_Diagram.png
-│  │  ├─ ERD_Diagram.png
+│     ├─ Arq_Diagram.png
+│     └─ ERD_Diagram.png
 ├─ requirements.txt
 ├─ requirements-dev.txt
 ├─ src/
@@ -172,26 +172,26 @@ TCampus/
    └─ run-quality.sh
 ```
 ---
+'
+## Contributing
+Contributions are welcome, but must follow these basic guidelines:
 
-## Contribuição
-Contribuições são bem-vindas, porém seguem estas diretrizes básicas:
+1. Open an *issue* describing your suggestion/bug/feature.  
+2. Create a *branch* from `main` named `feature/<description>` or `fix/<description>`.  
+3. Submit a Pull Request referencing the issue. Include tests and justification for the change.  
+4. All contributions will be reviewed; accepted contributions will be merged after review.
 
-1. Abra uma *issue* descrevendo a sugestão/bug/feature.  
-2. Crie um *branch* a partir de `main` com nome `feature/<descrição>` ou `fix/<descrição>`.  
-3. Submeta um Pull Request referenciando a issue. Inclua testes e justificativa da alteração.  
-4. Todas as contribuições serão avaliadas; contribuições aceitas serão mescladas mediante revisão.
-
-Veja `CONTRIBUTING.md` para política completa (inclui CLA/PR policy recomendada).
-
----
-
-## Licença
-- **Código:** Business Source License 1.1 (BSL 1.1). O código é *source-available* mas com restrições de uso comercial conforme texto em `LICENSE`. Leia o arquivo para detalhes e condições, inclusive sobre eventual reversão para licença mais permissiva em data futura.  
-- **Documentação (PDFs, guias):** CC BY-NC-SA 4.0 — permite adaptação e compartilhamento não comercial, exige atribuição e ShareAlike. Texto completo em `LICENSE-DOCS`.
+See `CONTRIBUTING.md` for the full policy (includes recommended CLA/PR policy).
 
 ---
 
-## Contato / Licenciamento Comercial
-Uso comercial ou redistribuição para fins comerciais requer autorização explícita dos autores. Para propostas de licenciamento comercial ou dúvidas legais, contate os mantenedores listados no arquivo `AUTHORS.md` ou envie um email para o responsável (informações de contato no repositório).
+## License
+- **Code:** Business Source License 1.1 (BSL 1.1). The code is *source-available* but with commercial use restrictions as described in `LICENSE`. Read the file for details and conditions, including possible future conversion to a more permissive license.  
+- **Documentation (PDFs, guides):** CC BY-NC-SA 4.0 — allows adaptation and non-commercial sharing, requires attribution and ShareAlike. Full text in `LICENSE-DOCS`.
+
+---
+
+## Contact / Commercial Licensing
+Commercial use or redistribution for commercial purposes requires explicit authorization from the authors. For commercial licensing proposals or legal questions, contact the maintainers listed in `AUTHORS.md` or send an email to the responsible party (contact information in the repository).
 
 ---
