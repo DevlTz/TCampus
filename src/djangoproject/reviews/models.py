@@ -5,8 +5,8 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 MAX_SCORE = 10
 
 class ReviewTeacher(models.Model):
-    teacher = models.ForeignKey('teachers.Teacher',on_delete=models.CASCADE,related_name='reviews')
-    student = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,related_name='reviews')
+    teacher = models.ForeignKey('teachers.Teacher', on_delete=models.CASCADE, related_name='reviews')
+    student = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews')
     score = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(MAX_SCORE)], help_text=f'Integer rating 1-{MAX_SCORE}')
     comment = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
