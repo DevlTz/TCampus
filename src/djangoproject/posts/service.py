@@ -21,13 +21,19 @@ def toggle_post_like(user: User, post_id: str):
 
 def get_all_posts():
     return Posts.objects.all().order_by("-postedAt")
+
+
 def get_post_by_id(post_id: str):
     try:
         return Posts.objects.get(id=post_id)
     except Posts.DoesNotExist:
         raise ValidationError(f"Post with id {post_id} not found")
+
+
 def get_posts_by_user(user: User):
     return Posts.objects.filter(postedBy=user).order_by("-postedAt")
+
+
 def create_post(user: User, image, text: str):
     post = Posts.objects.create(image=image, text=text, postedBy=user)
     post.save()
