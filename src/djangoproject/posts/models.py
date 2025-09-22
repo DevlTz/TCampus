@@ -27,14 +27,26 @@ class Events(models.Model):
     locate = models.CharField(max_length=512) # can be text or URL 
     postedAt = models.DateTimeField(auto_now_add=True, editable=False) 
     postedBy = models.ForeignKey(User, on_delete=models.CASCADE, related_name="events_postedBy", editable=False)
-
     objects = models.Manager()
+    participants = models.ManyToManyField(User, related_name="events_participants", blank=True)
+    participants_count = models.PositiveIntegerField(default=0)
 
     class Meta:
         ordering = ["-event_date"]
 
     def __str__(self):
         return f"{self.title} — {self.event_date:%Y-%m-%d %H:%M}"
+    
+    @property
+    def total_participants(self):
+        """
+        Returns the total number of participants for the event.
+        """
+        # In case of inconsistency, fallback to count()
+        if self.participants_count is None:
+            return self.participants.count()
+        return self.participants_count
+    
     
 
 

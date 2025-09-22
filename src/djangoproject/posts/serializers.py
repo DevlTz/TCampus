@@ -36,12 +36,12 @@ class EventsSerializer(serializers.ModelSerializer):
     postedBy_id = serializers.PrimaryKeyRelatedField(source="postedBy", read_only=True)
     postedBy_username = serializers.CharField(source="postedBy.get_full_name", read_only=True)
     event_date = serializers.DateTimeField(required=True)
+    total_participants = serializers.IntegerField(source='total_participants', read_only=True)
 
     class Meta:
         model = Events
-        fields = ["id", "title", "event_date", "locate", "postedBy_id", "postedBy_username", "postedAt"]
-        read_only_fields = ["id", "postedBy_id", "postedBy_username", "postedAt"]
-
+        fields = ["id", "title", "event_date", "locate", "postedBy_id", "postedBy_username", "postedAt", "total_participants"]
+        read_only_fields = ["id", "postedBy_id", "postedBy_username", "postedAt", "total_participants"]
 
     def validate_event_date(self, value):
         # doesn't allow old dates (old than now)

@@ -6,9 +6,11 @@ from django.db import transaction
 from rest_framework import generics
 from rest_framework.exceptions import PermissionDenied, ValidationError
 from .serializers import PostsSerializer, EventsSerializer
+from .service import toggle_event_rsvp
+from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListAPIView
-from .service import toggle_post_like
+from .services import toggle_post_like
 from django.utils import timezone
 from django.db.models import Q
 
@@ -144,3 +146,25 @@ class EventDeleteAPIView(generics.DestroyAPIView):
                 raise PermissionDenied("You do not have permission to delete this event.")
             instance.delete()
 
+class EventRSVPAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def patch(self, request, pk, *args, **kwargs):
+        """
+        PATCH /events/<pk>/rsvp/  body: {"action": "join"} or {"action": "leave"}
+        """
+        action = request.data.get("action")
+        if action not in ("join", "leave"):
+            return Response({"detail": "Action must be 'join' or 'leave'."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # make sure event exists (returns 404 if not)
+        event = get_object_or_404(Events, pk=pk)
+
+        try:
+            message = toggle_event_rsvp(request.user, str(pk), action)
+        except ValidationError as e:
+            return Response({"detail": e.detail if hasattr(e, "detail") else str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+        # return serialized event (with updated total)
+        serializer = EventsSerializer(event)
+        return Response({"message": message, "event": serializer.data}, status=status.HTTP_200_OK)
