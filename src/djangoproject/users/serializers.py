@@ -3,7 +3,6 @@ from .models import User
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from django.contrib.auth.password_validation import validate_password
-from rest_framework_simplejwt.tokens import RefreshToken
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
