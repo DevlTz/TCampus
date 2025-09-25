@@ -60,3 +60,16 @@
 - **Justificativa**: O método `get` da classe `ListAllUsersView` recebia o parâmetro `request` por herança da `APIView`, mas não o utilizava em sua lógica. Para melhorar a clareza e sinalizar explicitamente que o parâmetro é intencionalmente não utilizado, ele foi renomeado para `_request`, seguindo as convenções da comunidade Python e satisfazendo o `pylint`.
 - **Impacto**: Melhoria na legibilidade do código e eliminação de um aviso do linter, deixando o código mais limpo.
 - **Testes**: N/A (Refatoração segura que não altera o comportamento da função). -> Então, não será necessário criar um before-after.
+
+## Refatoração #5: Desacoplar Lógica de Consulta da FeedView (SRP)
+
+- **ID**: Não identificado(Violação do SRP)
+- **Data**: 25/09/2025
+- **Code Smell**: Violação do Princípio da Responsabilidade Única (SRP).
+- **Técnica Aplicada**: "Extract Method" (movendo a lógica de consulta para Model Managers customizados).
+- **Arquivos Afetados**:
+  - `src/djangoproject/posts/views.py` (Modificado)
+  - `src/djangoproject/posts/models.py` (Modificado)
+- **Justificativa**: A `FeedView` estava fortemente acoplada à lógica de acesso a dados, sabendo _como_ construir as queries complexas tanto para Posts quanto para Eventos, incluindo a lógica de escopo. Isso violava o SRP. A lógica de consulta de cada modelo foi movida para seu respectivo `Manager` (`PostsManager`, `EventsManager`), centralizando e encapsulando as regras de negócio de acesso a dados.
+- **Impacto**: A `FeedView` foi simplificada e sua responsabilidade agora é clara: orquestrar a busca de dados e formatar a resposta. As consultas ao banco de dados tornaram-se reutilizáveis e testáveis de forma isolada, melhorando a coesão e o desacoplamento do código.
+- **Testes**: Não consideramos necessário. (Refatoração estrutural; comportamento final inalterado).

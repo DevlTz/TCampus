@@ -1,0 +1,54 @@
+import uuid
+from users.models import User
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+from django.db import models
+
+# Create your models here.
+
+fileStorage = FileSystemStorage(location=settings.MEDIA_ROOT)
+class Posts(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    likes = models.IntegerField(default=0)
+    postedAt = models.DateTimeField(auto_now_add=True, editable=False)
+    likedBy = models.ManyToManyField(User, related_name="posts_likes")
+    postedBy = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts_postedBy", editable=False)
+    text = models.TextField(max_length=250, editable=False, default=" ")
+    image = models.ImageField(editable=False, default=None, storage=fileStorage)
+    objects = models.Manager()
+    
+    def __str__(self):
+        return f"{self.id} has {self.likes} likes"
+
+class Events(models.Model): 
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField("Title: ", max_length=255)
+    event_date = models.DateTimeField("Event Date and Time:")
+    locate = models.CharField(max_length=512) # can be text or URL 
+    postedAt = models.DateTimeField(auto_now_add=True, editable=False) 
+    postedBy = models.ForeignKey(User, on_delete=models.CASCADE, related_name="events_postedBy", editable=False)
+    objects = models.Manager()
+    participants = models.ManyToManyField(User, related_name="events_participants", blank=True)
+    participants_count = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["-event_date"]
+
+    def __str__(self):
+        return f"{self.title} — {self.event_date:%Y-%m-%d %H:%M}"
+    
+    @property
+    def total_participants(self):
+        """
+        Returns the total number of participants for the event.
+        """
+        # In case of inconsistency, fallback to count()
+        if self.participants_count is None:
+            return self.participants.count()
+        return self.participants_count
+    
+    
+
+
+
+    
