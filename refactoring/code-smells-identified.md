@@ -96,4 +96,4 @@
 
 - **Ferramenta:** Pylint (W0613)
 
-- **Status:** Esperando Correção
+- **Status:** Corrigido

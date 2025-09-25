@@ -50,4 +50,13 @@
 - **Impacto**: Remoção de processamento de imports que não estavam sendo utilizados
 - **Testes**: Todos os testes passando
 
+## Refatoração #4: Corrigir Argumento de Função Não Utilizado
 
+- **ID**: W0613
+- **Data**: 25/09/2025
+- **Code Smell**: Unused Parameter / Argumento Não Utilizado
+- **Técnica Aplicada**: "Rename Variable" (para convenção de não uso)
+- **Arquivos Afetados**: `src/djangoproject/users/views.py`
+- **Justificativa**: O método `get` da classe `ListAllUsersView` recebia o parâmetro `request` por herança da `APIView`, mas não o utilizava em sua lógica. Para melhorar a clareza e sinalizar explicitamente que o parâmetro é intencionalmente não utilizado, ele foi renomeado para `_request`, seguindo as convenções da comunidade Python e satisfazendo o `pylint`.
+- **Impacto**: Melhoria na legibilidade do código e eliminação de um aviso do linter, deixando o código mais limpo.
+- **Testes**: N/A (Refatoração segura que não altera o comportamento da função). -> Então, não será necessário criar um before-after.
