@@ -20,7 +20,7 @@
 - **Recomendação**: Iniciar testes da aplicação
 - **Severidade**: Baixa
 - **Ferramenta**: flake8
-- **Status**: Esperando correção
+- **Status**: Corrigido
 
 ## 2. Code Smell Estrutural ("Tratamento de Exceção Genérico").
 
@@ -42,7 +42,7 @@
 - **Recomendação**: Verificar se realmente há necessidade de
 - **Severidade**: Baixa
 - **Ferramenta**: vultures
-- **Status**: Esperando correção
+- **Status**: Corrigido
 
 # 4. Duplicate Code
 
