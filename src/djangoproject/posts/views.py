@@ -6,11 +6,11 @@ from django.db import transaction
 from rest_framework import generics
 from rest_framework.exceptions import PermissionDenied, ValidationError
 from .serializers import PostsSerializer, EventsSerializer
-from .services import toggle_event_rsvp
+from .service import toggle_event_rsvp
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListAPIView
-from .services import toggle_post_like
+from .service import toggle_post_like
 from django.utils import timezone
 from django.db.models import Q
 
