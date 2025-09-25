@@ -33,3 +33,30 @@
   - `ToggleFollowUserView` (~18 linhas) **criada** na `views.py`.
 - **Impacto**: Redução significativa de código duplicado (~30 linhas). Melhor testabilidade, manutenbilidade e legibilidade devido a redução de código duplicado
 - **Testes**: Todos os testes passando
+
+## Refatoração #3: Remoção de código morto
+
+- **ID**: Não identificado
+- **Data**: 25/09/2025
+- **Autor**: Caio de Medeiros Trindade
+- **Code Smell**: Dead Code (Unused Import) em `src/djangoproject/users/serializers.py`
+- **Técnica Aplicada**: Remove Dead Code
+- **Arquivos Afetados**:
+  - `src/djangoproject/users/serializers.py` (Modificado)
+  - `src/djangoproject/posts/tests.py` (Modificado)
+- **Justificativa**: Remoção de código desnecessário para melhorar a legibilidade e reduzir a complexidade do código-fonte
+- **Resultado**:
+  - (2 linhas) **removidas**.
+- **Impacto**: Remoção de processamento de imports que não estavam sendo utilizados
+- **Testes**: Todos os testes passando
+
+## Refatoração #4: Corrigir Argumento de Função Não Utilizado
+
+- **ID**: W0613
+- **Data**: 25/09/2025
+- **Code Smell**: Unused Parameter / Argumento Não Utilizado
+- **Técnica Aplicada**: "Rename Variable" (para convenção de não uso)
+- **Arquivos Afetados**: `src/djangoproject/users/views.py`
+- **Justificativa**: O método `get` da classe `ListAllUsersView` recebia o parâmetro `request` por herança da `APIView`, mas não o utilizava em sua lógica. Para melhorar a clareza e sinalizar explicitamente que o parâmetro é intencionalmente não utilizado, ele foi renomeado para `_request`, seguindo as convenções da comunidade Python e satisfazendo o `pylint`.
+- **Impacto**: Melhoria na legibilidade do código e eliminação de um aviso do linter, deixando o código mais limpo.
+- **Testes**: N/A (Refatoração segura que não altera o comportamento da função). -> Então, não será necessário criar um before-after.
