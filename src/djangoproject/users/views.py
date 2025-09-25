@@ -1,7 +1,6 @@
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
 from .models import User
 from .serializers import UserSerializer, MyTokenObtainPairSerializer
 from .service import toggle_user_follow
@@ -45,7 +44,7 @@ class CreateUserView(APIView):
         return Response(serializer.errors, status=400)
 class ListAllUsersView(APIView):
     permission_classes = [IsAuthenticated, IsAdminUser]
-    def get(self, request):
+    def get(self, _request):
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data)
