@@ -34,9 +34,25 @@
 - **Impacto**: Redução significativa de código duplicado (~30 linhas). Melhor testabilidade, manutenbilidade e legibilidade devido a redução de código duplicado
 - **Testes**: Todos os testes passando
 
-## Refatoração #3: Renomear variável não utilizada 
+## Refatoração #3: Remoção de código morto
 
-- **ID**: R0802
+- **ID**: Não identificado
+- **Data**: 25/09/2025
+- **Autor**: Caio de Medeiros Trindade
+- **Code Smell**: Dead Code (Unused Import) em `src/djangoproject/users/serializers.py`
+- **Técnica Aplicada**: Remove Dead Code
+- **Arquivos Afetados**:
+  - `src/djangoproject/users/serializers.py` (Modificado)
+  - `src/djangoproject/posts/tests.py` (Modificado)
+- **Justificativa**: Remoção de código desnecessário para melhorar a legibilidade e reduzir a complexidade do código-fonte
+- **Resultado**:
+  - (2 linhas) **removidas**.
+- **Impacto**: Remoção de processamento de imports que não estavam sendo utilizados
+- **Testes**: Todos os testes passando
+
+## Refatoração #4: Corrigir Argumento de Função Não Utilizado
+
+- **ID**: W0613
 - **Data**: 23/09/2025
 - **Autor**: Luisa Ferreira de Souza Santos
 - **Code Smell**: Unused argument em `src/djangoproject/users/views.py`
@@ -48,3 +64,16 @@
   - variável `request`  -> `_request` 
 - **Impacto**: Melhora na legibilidade do código, deixando explícito que não é um parâmetro utilizado.
 - **Testes**: Todos os testes passando
+
+## Refatoração #5: Desacoplar Lógica de Consulta da FeedView (SRP)
+
+- **ID**: Não identificado(Violação do SRP)
+- **Data**: 25/09/2025
+- **Code Smell**: Violação do Princípio da Responsabilidade Única (SRP).
+- **Técnica Aplicada**: "Extract Method" (movendo a lógica de consulta para Model Managers customizados).
+- **Arquivos Afetados**:
+  - `src/djangoproject/posts/views.py` (Modificado)
+  - `src/djangoproject/posts/models.py` (Modificado)
+- **Justificativa**: A `FeedView` estava fortemente acoplada à lógica de acesso a dados, sabendo _como_ construir as queries complexas tanto para Posts quanto para Eventos, incluindo a lógica de escopo. Isso violava o SRP. A lógica de consulta de cada modelo foi movida para seu respectivo `Manager` (`PostsManager`, `EventsManager`), centralizando e encapsulando as regras de negócio de acesso a dados.
+- **Impacto**: A `FeedView` foi simplificada e sua responsabilidade agora é clara: orquestrar a busca de dados e formatar a resposta. As consultas ao banco de dados tornaram-se reutilizáveis e testáveis de forma isolada, melhorando a coesão e o desacoplamento do código.
+- **Testes**: Não consideramos necessário. (Refatoração estrutural; comportamento final inalterado).
