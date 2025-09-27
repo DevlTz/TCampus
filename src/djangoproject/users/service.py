@@ -31,5 +31,5 @@ def toggle_user_follow(user: User, target_username: str):
 
     user.save()
     user_to_follow.save()
-    
+
     return f"The user {user.username} {action_message} {target_username}"

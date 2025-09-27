@@ -24,7 +24,7 @@
 - **Técnica Aplicada**: Consolidate Duplicate Logic & Move Method (para Camada de Service)
 - **Arquivos Afetados**:
   - `src/djangoproject/users/views.py` (Modificado)
-  - `src/djangoproject/users/services.py` (Criado)
+  - `src/djangoproject/users/service.py` (Criado)
   - `src/djangoproject/users/urls.py` (Modificado)
 - **Justificativa**: A lógica de `Follow` e `Unfollow` estava espalhada por duas Views (60+ linhas no total), violando o princípio DRY e o SRP (Views continham lógica de negócio pesada). A lógica foi consolidada em um único método `toggle_user_follow` e movida para um `services.py` para desacoplar a lógica de negócio da camada de apresentação.
 - **Resultado**:
@@ -53,13 +53,17 @@
 ## Refatoração #4: Corrigir Argumento de Função Não Utilizado
 
 - **ID**: W0613
-- **Data**: 25/09/2025
-- **Code Smell**: Unused Parameter / Argumento Não Utilizado
-- **Técnica Aplicada**: "Rename Variable" (para convenção de não uso)
-- **Arquivos Afetados**: `src/djangoproject/users/views.py`
-- **Justificativa**: O método `get` da classe `ListAllUsersView` recebia o parâmetro `request` por herança da `APIView`, mas não o utilizava em sua lógica. Para melhorar a clareza e sinalizar explicitamente que o parâmetro é intencionalmente não utilizado, ele foi renomeado para `_request`, seguindo as convenções da comunidade Python e satisfazendo o `pylint`.
-- **Impacto**: Melhoria na legibilidade do código e eliminação de um aviso do linter, deixando o código mais limpo.
-- **Testes**: N/A (Refatoração segura que não altera o comportamento da função). -> Então, não será necessário criar um before-after.
+- **Data**: 23/09/2025
+- **Autor**: Luisa Ferreira de Souza Santos
+- **Code Smell**: Unused argument em `src/djangoproject/users/views.py`
+- **Técnica Aplicada**: Rename Variable
+- **Arquivos Afetados**:
+  - `src/djangoproject/users/views.py` (Modificado)
+- **Justificativa**: Melhorar a clareza da intenção do código, indicando explicitamente que um parâmetro herdado não é necessário para a lógica do método.
+- **Resultado**:
+  - variável `request`  -> `_request` 
+- **Impacto**: Melhora na legibilidade do código, deixando explícito que não é um parâmetro utilizado.
+- **Testes**: Todos os testes passando
 
 ## Refatoração #5: Desacoplar Lógica de Consulta da FeedView (SRP)
 
