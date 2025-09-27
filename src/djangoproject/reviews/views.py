@@ -1,5 +1,5 @@
 from rest_framework import generics
-from .serializers import *
+from .serializers import ReviewsSerializer
 from .models import ReviewTeacher
 from rest_framework.exceptions import PermissionDenied
 from rest_framework import status
@@ -52,5 +52,5 @@ class ReviewListUniqueAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = ReviewsSerializer
 
-    def query_set(self):
+    def get_queryset(self):
         return ReviewTeacher.objects.filter(id=self.kwargs["pk"])
