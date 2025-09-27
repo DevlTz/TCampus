@@ -8,7 +8,7 @@ from users.models import User
 class ReviewsSerializer(serializers.ModelSerializer):
     teacher = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     student = serializers.PrimaryKeyRelatedField(required=True, queryset=User.objects.all())
-    score = serializers.IntegerField(required=True, )
+    score = serializers.IntegerField(required=True)
 
     class Meta:
         model = ReviewTeacher
