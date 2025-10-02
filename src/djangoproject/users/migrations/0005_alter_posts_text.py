@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0004_alter_posts_text'),
+        ("users", "0004_alter_posts_text"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='posts',
-            name='text',
-            field=models.TextField(default=' ', editable=False, max_length=250),
+            model_name="posts",
+            name="text",
+            field=models.TextField(default=" ", editable=False, max_length=250),
         ),
     ]

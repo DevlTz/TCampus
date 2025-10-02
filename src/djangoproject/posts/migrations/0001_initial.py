@@ -17,15 +17,46 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Posts',
+            name="Posts",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('likes', models.IntegerField(default=0)),
-                ('postedAt', models.DateTimeField(auto_now_add=True)),
-                ('text', models.TextField(default=' ', editable=False, max_length=250)),
-                ('image', models.ImageField(default=None, editable=False, storage=django.core.files.storage.FileSystemStorage(location='/djangoproject/media'), upload_to='')),
-                ('likedBy', models.ManyToManyField(related_name='posts_likes', to=settings.AUTH_USER_MODEL)),
-                ('postedBy', models.ForeignKey(editable=False, on_delete=django.db.models.deletion.CASCADE, related_name='posts_postedBy', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("likes", models.IntegerField(default=0)),
+                ("postedAt", models.DateTimeField(auto_now_add=True)),
+                ("text", models.TextField(default=" ", editable=False, max_length=250)),
+                (
+                    "image",
+                    models.ImageField(
+                        default=None,
+                        editable=False,
+                        storage=django.core.files.storage.FileSystemStorage(
+                            location="/djangoproject/media"
+                        ),
+                        upload_to="",
+                    ),
+                ),
+                (
+                    "likedBy",
+                    models.ManyToManyField(
+                        related_name="posts_likes", to=settings.AUTH_USER_MODEL
+                    ),
+                ),
+                (
+                    "postedBy",
+                    models.ForeignKey(
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="posts_postedBy",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

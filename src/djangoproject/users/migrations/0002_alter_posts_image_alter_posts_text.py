@@ -7,18 +7,29 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0001_initial'),
+        ("users", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='posts',
-            name='image',
-            field=models.ImageField(blank=True, default=None, editable=False, null=True, storage=django.core.files.storage.FileSystemStorage(location='/djangoproject/media'), upload_to=''),
+            model_name="posts",
+            name="image",
+            field=models.ImageField(
+                blank=True,
+                default=None,
+                editable=False,
+                null=True,
+                storage=django.core.files.storage.FileSystemStorage(
+                    location="/djangoproject/media"
+                ),
+                upload_to="",
+            ),
         ),
         migrations.AlterField(
-            model_name='posts',
-            name='text',
-            field=models.TextField(blank=True, editable=False, max_length=250, null=True),
+            model_name="posts",
+            name="text",
+            field=models.TextField(
+                blank=True, editable=False, max_length=250, null=True
+            ),
         ),
     ]

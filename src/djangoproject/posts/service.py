@@ -1,6 +1,7 @@
 from rest_framework.exceptions import ValidationError
 from .models import Posts, Events
-from users.models import User 
+from users.models import User
+
 
 def toggle_post_like(user: User, post_id: str):
     try:
@@ -18,6 +19,7 @@ def toggle_post_like(user: User, post_id: str):
         action_message = "liked"
     post.save()
     return f"The user {user.username} {action_message} this post"
+
 
 def get_all_posts():
     return Posts.objects.all().order_by("-postedAt")
@@ -38,6 +40,8 @@ def create_post(user: User, image, text: str):
     post = Posts.objects.create(image=image, text=text, postedBy=user)
     post.save()
     return post
+
+
 def toggle_event_rsvp(user: User, event_id: str, action: str):
     """
     Toggle RSVP for the event. `action` must be 'join' or 'leave'.
