@@ -85,7 +85,7 @@ black_mode="check" # 'check' or 'format'
 declare -A TOOL_CMD
 # Run pylint from inside the SRC_DIR so package modules resolve correctly.
 # Assumes package root is 'djangoproject' inside SRC_DIR (adjust if different).
-TOOL_CMD[pylint]="(cd \"${SRC_DIR}\" && pylint djangoproject)"
+TOOL_CMD[pylint]="(cd \"${SRC_DIR}\" && pylint djangoproject users posts reviews)"
 # Keep Black's default line length (88) consistent with Flake8 to avoid conflicts.
 # Exclude common generated folders (migrations, venv, node_modules).
 TOOL_CMD[flake8]="flake8 --max-line-length=88 --exclude=migrations,venv,node_modules \"${SRC_DIR}\""
