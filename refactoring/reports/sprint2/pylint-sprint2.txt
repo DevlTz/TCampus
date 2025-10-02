@@ -1,0 +1,20 @@
+************* Module djangoproject.urls
+djangoproject/urls.py:23:36: C0303: Trailing whitespace (trailing-whitespace)
+djangoproject/urls.py:24:0: C0304: Final newline missing (missing-final-newline)
+************* Module djangoproject.settings
+djangoproject/settings.py:173:0: C0301: Line too long (107/100) (line-too-long)
+djangoproject/settings.py:193:0: C0304: Final newline missing (missing-final-newline)
+djangoproject/settings.py:90:19: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+djangoproject/settings.py:16:0: C0411: standard import "datetime.timedelta" should be placed before third party import "dotenv.load_dotenv" (wrong-import-order)
+
+-----------------------------------
+Your code has been rated at 8.46/10
+
+
+
+# --- metadata ---
+tool: pylint
+command: (cd "../src/djangoproject/" && pylint djangoproject)
+exit_code: 16
+runtime_seconds: 3
+report_path: ../refactoring/reports/sprint2/pylint-sprint2.txt

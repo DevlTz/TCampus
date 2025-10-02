@@ -1,0 +1,548 @@
+../src/djangoproject/manage.py
+    LOC: 22
+    LLOC: 13
+    SLOC: 15
+    Comments: 1
+    Single comments: 3
+    Multi: 0
+    Blank: 4
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 7%
+        (C + M % L): 5%
+../src/djangoproject/djangoproject/urls.py
+    LOC: 24
+    LLOC: 4
+    SLOC: 7
+    Comments: 0
+    Single comments: 0
+    Multi: 15
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 62%
+../src/djangoproject/djangoproject/settings.py
+    LOC: 193
+    LLOC: 34
+    SLOC: 121
+    Comments: 16
+    Single comments: 16
+    Multi: 8
+    Blank: 48
+    - Comment Stats
+        (C % L): 8%
+        (C % S): 13%
+        (C + M % L): 12%
+../src/djangoproject/djangoproject/wsgi.py
+    LOC: 16
+    LLOC: 5
+    SLOC: 4
+    Comments: 0
+    Single comments: 0
+    Multi: 6
+    Blank: 6
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 38%
+../src/djangoproject/djangoproject/asgi.py
+    LOC: 16
+    LLOC: 5
+    SLOC: 4
+    Comments: 0
+    Single comments: 0
+    Multi: 6
+    Blank: 6
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 38%
+../src/djangoproject/djangoproject/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/users/apps.py
+    LOC: 6
+    LLOC: 4
+    SLOC: 4
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/users/urls.py
+    LOC: 10
+    LLOC: 3
+    SLOC: 9
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/users/service.py
+    LOC: 35
+    LLOC: 26
+    SLOC: 26
+    Comments: 3
+    Single comments: 3
+    Multi: 0
+    Blank: 6
+    - Comment Stats
+        (C % L): 9%
+        (C % S): 12%
+        (C + M % L): 9%
+../src/djangoproject/users/admin.py
+    LOC: 7
+    LLOC: 5
+    SLOC: 5
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 14%
+        (C % S): 20%
+        (C + M % L): 14%
+../src/djangoproject/users/tests.py
+    LOC: 3
+    LLOC: 1
+    SLOC: 1
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 33%
+        (C % S): 100%
+        (C + M % L): 33%
+../src/djangoproject/users/models.py
+    LOC: 16
+    LLOC: 12
+    SLOC: 12
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 4
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/users/views.py
+    LOC: 86
+    LLOC: 68
+    SLOC: 67
+    Comments: 2
+    Single comments: 2
+    Multi: 0
+    Blank: 17
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 3%
+        (C + M % L): 2%
+../src/djangoproject/users/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/users/serializers.py
+    LOC: 50
+    LLOC: 26
+    SLOC: 34
+    Comments: 4
+    Single comments: 4
+    Multi: 0
+    Blank: 12
+    - Comment Stats
+        (C % L): 8%
+        (C % S): 12%
+        (C + M % L): 8%
+../src/djangoproject/users/migrations/0005_alter_posts_text.py
+    LOC: 18
+    LLOC: 4
+    SLOC: 12
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 8%
+        (C + M % L): 6%
+../src/djangoproject/users/migrations/0004_alter_posts_text.py
+    LOC: 18
+    LLOC: 4
+    SLOC: 12
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 8%
+        (C + M % L): 6%
+../src/djangoproject/users/migrations/0001_initial.py
+    LOC: 60
+    LLOC: 12
+    SLOC: 53
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 6
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 2%
+../src/djangoproject/users/migrations/0003_alter_posts_image_alter_posts_text.py
+    LOC: 24
+    LLOC: 5
+    SLOC: 18
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 6%
+        (C + M % L): 4%
+../src/djangoproject/users/migrations/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/users/migrations/0006_delete_posts.py
+    LOC: 16
+    LLOC: 4
+    SLOC: 10
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 10%
+        (C + M % L): 6%
+../src/djangoproject/users/migrations/0002_alter_posts_image_alter_posts_text.py
+    LOC: 24
+    LLOC: 5
+    SLOC: 18
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 6%
+        (C + M % L): 4%
+../src/djangoproject/users/migrations/0007_alter_user_managers.py
+    LOC: 20
+    LLOC: 5
+    SLOC: 14
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 7%
+        (C + M % L): 5%
+../src/djangoproject/reviews/apps.py
+    LOC: 6
+    LLOC: 4
+    SLOC: 4
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/reviews/urls.py
+    LOC: 7
+    LLOC: 3
+    SLOC: 6
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/reviews/admin.py
+    LOC: 7
+    LLOC: 5
+    SLOC: 5
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 14%
+        (C % S): 20%
+        (C + M % L): 14%
+../src/djangoproject/reviews/tests.py
+    LOC: 3
+    LLOC: 1
+    SLOC: 1
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 33%
+        (C % S): 100%
+        (C + M % L): 33%
+../src/djangoproject/reviews/models.py
+    LOC: 24
+    LLOC: 19
+    SLOC: 19
+    Comments: 2
+    Single comments: 1
+    Multi: 0
+    Blank: 4
+    - Comment Stats
+        (C % L): 8%
+        (C % S): 11%
+        (C + M % L): 8%
+../src/djangoproject/reviews/views.py
+    LOC: 56
+    LLOC: 47
+    SLOC: 47
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 9
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/reviews/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/reviews/serializers.py
+    LOC: 24
+    LLOC: 17
+    SLOC: 21
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 3
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/reviews/migrations/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/posts/apps.py
+    LOC: 6
+    LLOC: 4
+    SLOC: 4
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/posts/urls.py
+    LOC: 15
+    LLOC: 3
+    SLOC: 13
+    Comments: 3
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 20%
+        (C % S): 23%
+        (C + M % L): 20%
+../src/djangoproject/posts/service.py
+    LOC: 72
+    LLOC: 55
+    SLOC: 54
+    Comments: 3
+    Single comments: 2
+    Multi: 5
+    Blank: 11
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 6%
+        (C + M % L): 11%
+../src/djangoproject/posts/admin.py
+    LOC: 7
+    LLOC: 5
+    SLOC: 5
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 14%
+        (C % S): 20%
+        (C + M % L): 14%
+../src/djangoproject/posts/tests.py
+    LOC: 1
+    LLOC: 0
+    SLOC: 0
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 100%
+        (C % S): 100%
+        (C + M % L): 100%
+../src/djangoproject/posts/models.py
+    LOC: 87
+    LLOC: 52
+    SLOC: 54
+    Comments: 5
+    Single comments: 4
+    Multi: 11
+    Blank: 18
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 9%
+        (C + M % L): 18%
+../src/djangoproject/posts/views.py
+    LOC: 158
+    LLOC: 120
+    SLOC: 113
+    Comments: 11
+    Single comments: 9
+    Multi: 10
+    Blank: 26
+    - Comment Stats
+        (C % L): 7%
+        (C % S): 10%
+        (C + M % L): 13%
+../src/djangoproject/posts/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/posts/serializers.py
+    LOC: 62
+    LLOC: 42
+    SLOC: 45
+    Comments: 5
+    Single comments: 5
+    Multi: 0
+    Blank: 12
+    - Comment Stats
+        (C % L): 8%
+        (C % S): 11%
+        (C + M % L): 8%
+../src/djangoproject/posts/migrations/0002_event.py
+    LOC: 31
+    LLOC: 8
+    SLOC: 25
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+../src/djangoproject/posts/migrations/0001_initial.py
+    LOC: 31
+    LLOC: 9
+    SLOC: 24
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 6
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+../src/djangoproject/posts/migrations/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+../src/djangoproject/posts/migrations/0003_events_delete_event.py
+    LOC: 36
+    LLOC: 8
+    SLOC: 30
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 3%
+        (C + M % L): 3%
+
+
+# --- metadata ---
+tool: radon-raw
+command: radon raw "../src/djangoproject/"
+exit_code: 0
+runtime_seconds: 0
+report_path: ../refactoring/reports/sprint2/radon-raw-sprint2.txt
