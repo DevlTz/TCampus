@@ -1,46 +1,10 @@
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/djangoproject/asgi.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/djangoproject/wsgi.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/djangoproject/urls.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/apps.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/admin.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/manage.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/migrations/0002_event.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/migrations/0001_initial.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/migrations/0003_events_delete_event.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/djangoproject/settings.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/serializers.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/urls.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/models.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/reviews/admin.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/reviews/apps.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/service.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/reviews/urls.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/reviews/serializers.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/admin.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/apps.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/reviews/models.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/reviews/views.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0002_alter_posts_image_alter_posts_text.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0003_alter_posts_image_alter_posts_text.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0005_alter_posts_text.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0006_delete_posts.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0004_alter_posts_text.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0007_alter_user_managers.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/posts/views.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/models.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/urls.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/service.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/serializers.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/migrations/0001_initial.py
-would reformat /var/www/html/Coding_BTI/IMD/TCampus/src/djangoproject/users/views.py
-
-Oh no! 💥 💔 💥
-35 files would be reformatted, 10 files would be left unchanged.
+All done! ✨ 🍰 ✨
+45 files would be left unchanged.
 
 
 # --- metadata ---
 tool: black
 command: black --check "../src/djangoproject/"
-exit_code: 1
+exit_code: 0
 runtime_seconds: 0
 report_path: ../refactoring/reports/sprint2/black-sprint2.txt

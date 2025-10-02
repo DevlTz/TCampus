@@ -1,168 +1,21 @@
-../src/djangoproject/djangoproject/settings.py:44:30: W291 trailing whitespace
-../src/djangoproject/djangoproject/settings.py:98:5: E122 continuation line missing indentation or outdented
 ../src/djangoproject/djangoproject/settings.py:106:89: E501 line too long (91 > 88 characters)
-../src/djangoproject/djangoproject/settings.py:173:89: E501 line too long (107 > 88 characters)
-../src/djangoproject/djangoproject/settings.py:193:31: W292 no newline at end of file
-../src/djangoproject/djangoproject/urls.py:23:37: W291 trailing whitespace
-../src/djangoproject/djangoproject/urls.py:24:2: W292 no newline at end of file
-../src/djangoproject/posts/admin.py:5:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/models.py:10:1: E265 block comment should start with '# '
-../src/djangoproject/posts/models.py:11:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/models.py:20:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:21:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/models.py:45:89: E501 line too long (111 > 88 characters)
-../src/djangoproject/posts/models.py:52:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:53:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:55:1: E303 too many blank lines (3)
-../src/djangoproject/posts/models.py:55:28: W291 trailing whitespace
-../src/djangoproject/posts/models.py:59:46: E261 at least two spaces before inline comment
-../src/djangoproject/posts/models.py:59:67: W291 trailing whitespace
-../src/djangoproject/posts/models.py:60:71: W291 trailing whitespace
-../src/djangoproject/posts/models.py:61:89: E501 line too long (112 > 88 characters)
-../src/djangoproject/posts/models.py:63:89: E501 line too long (95 > 88 characters)
-../src/djangoproject/posts/models.py:72:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:82:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:83:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:87:1: W293 blank line contains whitespace
-../src/djangoproject/posts/models.py:87:5: W292 no newline at end of file
-../src/djangoproject/posts/serializers.py:8:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/serializers.py:11:89: E501 line too long (104 > 88 characters)
-../src/djangoproject/posts/serializers.py:12:9: E225 missing whitespace around operator
-../src/djangoproject/posts/serializers.py:18:1: W293 blank line contains whitespace
-../src/djangoproject/posts/serializers.py:19:5: E303 too many blank lines (2)
-../src/djangoproject/posts/serializers.py:22:1: W293 blank line contains whitespace
-../src/djangoproject/posts/serializers.py:25:1: W293 blank line contains whitespace
-../src/djangoproject/posts/serializers.py:26:5: E303 too many blank lines (2)
-../src/djangoproject/posts/serializers.py:27:43: E251 unexpected spaces around keyword / parameter equals
-../src/djangoproject/posts/serializers.py:28:36: E128 continuation line under-indented for visual indent
-../src/djangoproject/posts/serializers.py:29:36: E128 continuation line under-indented for visual indent
-../src/djangoproject/posts/serializers.py:30:35: E124 closing bracket does not match visual indentation
-../src/djangoproject/posts/serializers.py:34:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/serializers.py:37:89: E501 line too long (94 > 88 characters)
-../src/djangoproject/posts/serializers.py:39:89: E501 line too long (94 > 88 characters)
-../src/djangoproject/posts/serializers.py:43:89: E501 line too long (126 > 88 characters)
-../src/djangoproject/posts/serializers.py:44:89: E501 line too long (103 > 88 characters)
-../src/djangoproject/posts/serializers.py:49:89: E501 line too long (116 > 88 characters)
-../src/djangoproject/posts/serializers.py:62:1: W391 blank line at end of file
-../src/djangoproject/posts/service.py:3:30: W291 trailing whitespace
-../src/djangoproject/posts/service.py:5:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/service.py:22:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/service.py:41:1: E302 expected 2 blank lines, found 0
-../src/djangoproject/posts/service.py:61:89: E501 line too long (98 > 88 characters)
-../src/djangoproject/posts/urls.py:9:89: E501 line too long (91 > 88 characters)
-../src/djangoproject/posts/urls.py:10:89: E501 line too long (100 > 88 characters)
-../src/djangoproject/posts/urls.py:12:89: E501 line too long (95 > 88 characters)
-../src/djangoproject/posts/urls.py:13:89: E501 line too long (95 > 88 characters)
-../src/djangoproject/posts/urls.py:15:2: W292 no newline at end of file
+../src/djangoproject/djangoproject/settings.py:170:89: E501 line too long (107 > 88 characters)
+../src/djangoproject/posts/service.py:65:89: E501 line too long (98 > 88 characters)
 ../src/djangoproject/posts/views.py:14:1: F401 'django.utils.timezone' imported but unused
 ../src/djangoproject/posts/views.py:15:1: F401 'django.db.models.Q' imported but unused
-../src/djangoproject/posts/views.py:17:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:30:1: W293 blank line contains whitespace
-../src/djangoproject/posts/views.py:31:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:33:5: E301 expected 1 blank line, found 0
-../src/djangoproject/posts/views.py:38:9: E265 block comment should start with '# '
-../src/djangoproject/posts/views.py:39:13: W291 trailing whitespace
-../src/djangoproject/posts/views.py:45:89: E501 line too long (93 > 88 characters)
-../src/djangoproject/posts/views.py:47:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:50:1: W293 blank line contains whitespace
-../src/djangoproject/posts/views.py:62:89: E501 line too long (96 > 88 characters)
-../src/djangoproject/posts/views.py:67:89: E501 line too long (92 > 88 characters)
-../src/djangoproject/posts/views.py:68:89: E501 line too long (95 > 88 characters)
-../src/djangoproject/posts/views.py:75:48: E261 at least two spaces before inline comment
-../src/djangoproject/posts/views.py:81:50: E261 at least two spaces before inline comment
-../src/djangoproject/posts/views.py:87:1: W293 blank line contains whitespace
-../src/djangoproject/posts/views.py:93:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:95:9: E117 over-indented
-../src/djangoproject/posts/views.py:103:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:104:9: E117 over-indented
-../src/djangoproject/posts/views.py:108:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:109:9: E117 over-indented
-../src/djangoproject/posts/views.py:113:1: W293 blank line contains whitespace
-../src/djangoproject/posts/views.py:114:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:115:9: E117 over-indented
-../src/djangoproject/posts/views.py:126:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:127:9: E117 over-indented
-../src/djangoproject/posts/views.py:134:89: E501 line too long (90 > 88 characters)
-../src/djangoproject/posts/views.py:137:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/posts/views.py:146:89: E501 line too long (112 > 88 characters)
-../src/djangoproject/posts/views.py:154:89: E501 line too long (121 > 88 characters)
-../src/djangoproject/posts/views.py:158:89: E501 line too long (98 > 88 characters)
-../src/djangoproject/reviews/admin.py:5:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/models.py:7:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/models.py:8:89: E501 line too long (101 > 88 characters)
-../src/djangoproject/reviews/models.py:9:89: E501 line too long (115 > 88 characters)
-../src/djangoproject/reviews/models.py:10:89: E501 line too long (139 > 88 characters)
-../src/djangoproject/reviews/models.py:13:89: E501 line too long (108 > 88 characters)
-../src/djangoproject/reviews/models.py:14:9: E116 unexpected indentation (comment)
-../src/djangoproject/reviews/models.py:14:89: E501 line too long (125 > 88 characters)
-../src/djangoproject/reviews/models.py:20:89: E501 line too long (116 > 88 characters)
+../src/djangoproject/posts/views.py:68:89: E501 line too long (96 > 88 characters)
+../src/djangoproject/reviews/models.py:26:89: E501 line too long (121 > 88 characters)
 ../src/djangoproject/reviews/serializers.py:2:1: F401 'django.utils.timezone' imported but unused
 ../src/djangoproject/reviews/serializers.py:3:1: F401 'django.core.validators.URLValidator' imported but unused
 ../src/djangoproject/reviews/serializers.py:4:1: F401 'django.core.exceptions.ValidationError' imported but unused
-../src/djangoproject/reviews/serializers.py:8:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/serializers.py:10:89: E501 line too long (92 > 88 characters)
-../src/djangoproject/reviews/serializers.py:16:1: W293 blank line contains whitespace
 ../src/djangoproject/reviews/tests.py:1:1: F401 'django.test.TestCase' imported but unused
-../src/djangoproject/reviews/urls.py:7:2: W292 no newline at end of file
 ../src/djangoproject/reviews/views.py:5:1: F401 'rest_framework.status' imported but unused
 ../src/djangoproject/reviews/views.py:8:1: F401 'rest_framework.views.APIView' imported but unused
 ../src/djangoproject/reviews/views.py:9:1: F401 'rest_framework.response.Response' imported but unused
-../src/djangoproject/reviews/views.py:12:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/views.py:17:1: W293 blank line contains whitespace
-../src/djangoproject/reviews/views.py:20:37: F821 undefined name 'Teacher'
-../src/djangoproject/reviews/views.py:22:1: W293 blank line contains whitespace
-../src/djangoproject/reviews/views.py:23:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/views.py:24:9: E117 over-indented
-../src/djangoproject/reviews/views.py:32:89: E501 line too long (89 > 88 characters)
-../src/djangoproject/reviews/views.py:35:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/views.py:36:9: E117 over-indented
-../src/djangoproject/reviews/views.py:43:89: E501 line too long (91 > 88 characters)
-../src/djangoproject/reviews/views.py:46:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/reviews/views.py:47:9: E117 over-indented
-../src/djangoproject/reviews/views.py:51:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/admin.py:5:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/admin.py:7:41: W292 no newline at end of file
-../src/djangoproject/users/models.py:5:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/models.py:10:89: E501 line too long (95 > 88 characters)
-../src/djangoproject/users/models.py:11:46: E231 missing whitespace after ','
-../src/djangoproject/users/models.py:11:89: E501 line too long (94 > 88 characters)
-../src/djangoproject/users/models.py:15:5: E303 too many blank lines (2)
-../src/djangoproject/users/serializers.py:10:1: W293 blank line contains whitespace
-../src/djangoproject/users/serializers.py:11:5: E303 too many blank lines (2)
-../src/djangoproject/users/serializers.py:24:89: E501 line too long (101 > 88 characters)
-../src/djangoproject/users/serializers.py:33:89: E501 line too long (106 > 88 characters)
-../src/djangoproject/users/serializers.py:34:89: E501 line too long (106 > 88 characters)
-../src/djangoproject/users/serializers.py:38:5: E303 too many blank lines (3)
-../src/djangoproject/users/serializers.py:43:45: E251 unexpected spaces around keyword / parameter equals
-../src/djangoproject/users/serializers.py:45:35: E124 closing bracket does not match visual indentation
-../src/djangoproject/users/serializers.py:50:89: E501 line too long (100 > 88 characters)
+../src/djangoproject/reviews/views.py:21:37: F821 undefined name 'Teacher'
+../src/djangoproject/users/serializers.py:52:89: E501 line too long (100 > 88 characters)
 ../src/djangoproject/users/service.py:2:1: F401 'django.shortcuts.get_object_or_404' imported but unused
-../src/djangoproject/users/service.py:5:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/service.py:6:1: W293 blank line contains whitespace
-../src/djangoproject/users/service.py:13:1: W293 blank line contains whitespace
-../src/djangoproject/users/service.py:14:5: E265 block comment should start with '# '
-../src/djangoproject/users/service.py:25:9: E265 block comment should start with '# '
-../src/djangoproject/users/service.py:27:43: W291 trailing whitespace
-../src/djangoproject/users/service.py:35:74: W292 no newline at end of file
 ../src/djangoproject/users/tests.py:1:1: F401 'django.test.TestCase' imported but unused
-../src/djangoproject/users/views.py:11:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/views.py:18:1: W293 blank line contains whitespace
-../src/djangoproject/users/views.py:20:5: E303 too many blank lines (2)
-../src/djangoproject/users/views.py:33:1: E302 expected 2 blank lines, found 0
-../src/djangoproject/users/views.py:35:5: E301 expected 1 blank line, found 0
-../src/djangoproject/users/views.py:43:1: E302 expected 2 blank lines, found 0
-../src/djangoproject/users/views.py:45:5: E301 expected 1 blank line, found 0
-../src/djangoproject/users/views.py:49:1: E302 expected 2 blank lines, found 0
-../src/djangoproject/users/views.py:53:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/views.py:55:1: W293 blank line contains whitespace
-../src/djangoproject/users/views.py:58:62: W291 trailing whitespace
-../src/djangoproject/users/views.py:63:9: E265 block comment should start with '# '
-../src/djangoproject/users/views.py:67:1: W293 blank line contains whitespace
-../src/djangoproject/users/views.py:71:1: W293 blank line contains whitespace
-../src/djangoproject/users/views.py:73:89: E501 line too long (100 > 88 characters)
-../src/djangoproject/users/views.py:75:1: E302 expected 2 blank lines, found 1
-../src/djangoproject/users/views.py:86:1: W293 blank line contains whitespace
-../src/djangoproject/users/views.py:86:5: W292 no newline at end of file
 
 
 # --- metadata ---

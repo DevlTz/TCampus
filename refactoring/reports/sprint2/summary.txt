@@ -1,5 +1,5 @@
-start_time: 2025-10-02T08:25:58-03:00
-end_time:   2025-10-02T08:26:02-03:00
+start_time: 2025-10-02T09:04:06-03:00
+end_time:   2025-10-02T09:04:17-03:00
 src_dir:    ../src/djangoproject/
 reports_dir:../refactoring/reports
 sprint:     2
@@ -7,10 +7,10 @@ scheme:     nested
 dry_run:    0
 
 # tools executed:
-pylint: exit=16 path=../refactoring/reports/sprint2/pylint-sprint2.txt cmd=(cd "../src/djangoproject/" && pylint djangoproject)
+pylint: exit=30 path=../refactoring/reports/sprint2/pylint-sprint2.txt cmd=(cd "../src/djangoproject/" && pylint djangoproject users posts reviews)
 flake8: exit=1 path=../refactoring/reports/sprint2/flake8-sprint2.txt cmd=flake8 --max-line-length=88 --exclude=migrations,venv,node_modules "../src/djangoproject/"
 vulture: exit=3 path=../refactoring/reports/sprint2/vulture-sprint2.txt cmd=vulture "../src/djangoproject/" --exclude 'migrations|settings.py'
-black: exit=1 path=../refactoring/reports/sprint2/black-sprint2.txt cmd=black --check "../src/djangoproject/"
+black: exit=0 path=../refactoring/reports/sprint2/black-sprint2.txt cmd=black --check "../src/djangoproject/"
 radon-mi: exit=0 path=../refactoring/reports/sprint2/radon-mi-sprint2.txt cmd=radon mi -s "../src/djangoproject/"
 radon-cc: exit=0 path=../refactoring/reports/sprint2/radon-cc-sprint2.txt cmd=radon cc -a -s "../src/djangoproject/"
 radon-raw: exit=0 path=../refactoring/reports/sprint2/radon-raw-sprint2.txt cmd=radon raw "../src/djangoproject/"

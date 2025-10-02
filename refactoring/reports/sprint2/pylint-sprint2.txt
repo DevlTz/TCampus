@@ -1,20 +1,415 @@
-************* Module djangoproject.urls
-djangoproject/urls.py:23:36: C0303: Trailing whitespace (trailing-whitespace)
-djangoproject/urls.py:24:0: C0304: Final newline missing (missing-final-newline)
 ************* Module djangoproject.settings
-djangoproject/settings.py:173:0: C0301: Line too long (107/100) (line-too-long)
-djangoproject/settings.py:193:0: C0304: Final newline missing (missing-final-newline)
-djangoproject/settings.py:90:19: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+djangoproject/settings.py:170:0: C0301: Line too long (107/100) (line-too-long)
+djangoproject/settings.py:89:18: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
 djangoproject/settings.py:16:0: C0411: standard import "datetime.timedelta" should be placed before third party import "dotenv.load_dotenv" (wrong-import-order)
+************* Module users.apps
+users/apps.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/apps.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.urls
+users/urls.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module users.service
+users/service.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/service.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+users/service.py:12:11: E1101: Class 'User' has no 'DoesNotExist' member (no-member)
+users/service.py:13:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValidationError(f"User '{target_username}' not found.") from exc' (raise-missing-from)
+users/service.py:2:0: W0611: Unused get_object_or_404 imported from django.shortcuts (unused-import)
+************* Module users.admin
+users/admin.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/admin.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.tests
+users/tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/tests.py:1:0: W0611: Unused TestCase imported from django.test (unused-import)
+************* Module users.models
+users/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/models.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.views
+users/views.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/views.py:12:0: C0115: Missing class docstring (missing-class-docstring)
+users/views.py:15:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:20:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:29:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:35:0: C0115: Missing class docstring (missing-class-docstring)
+users/views.py:38:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:48:0: C0115: Missing class docstring (missing-class-docstring)
+users/views.py:51:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:57:0: C0115: Missing class docstring (missing-class-docstring)
+users/views.py:62:0: C0115: Missing class docstring (missing-class-docstring)
+users/views.py:65:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:81:15: W0718: Catching too general exception Exception (broad-exception-caught)
+users/views.py:87:0: C0115: Missing class docstring (missing-class-docstring)
+users/views.py:90:4: C0116: Missing function or method docstring (missing-function-docstring)
+users/views.py:7:0: C0411: third party import "rest_framework_simplejwt.views.TokenObtainPairView" should be placed before local imports "models.User", "serializers.UserSerializer", "service.toggle_user_follow" (wrong-import-order)
+users/views.py:8:0: C0411: third party import "rest_framework.permissions.IsAuthenticated" should be placed before local imports "models.User", "serializers.UserSerializer", "service.toggle_user_follow" (wrong-import-order)
+users/views.py:9:0: C0411: third party import "rest_framework.exceptions.ValidationError" should be placed before local imports "models.User", "serializers.UserSerializer", "service.toggle_user_follow" (wrong-import-order)
+users/views.py:8:0: C0412: Imports from package rest_framework are not grouped (ungrouped-imports)
+************* Module users.serializers
+users/serializers.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/serializers.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+users/serializers.py:8:0: W0223: Method 'create' is abstract in class 'BaseSerializer' but is not overridden in child class 'MyTokenObtainPairSerializer' (abstract-method)
+users/serializers.py:8:0: W0223: Method 'update' is abstract in class 'BaseSerializer' but is not overridden in child class 'MyTokenObtainPairSerializer' (abstract-method)
+users/serializers.py:22:0: C0115: Missing class docstring (missing-class-docstring)
+users/serializers.py:39:4: C0115: Missing class docstring (missing-class-docstring)
+users/serializers.py:39:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+users/serializers.py:3:0: C0411: third party import "rest_framework.validators.UniqueValidator" should be placed before local import "models.User" (wrong-import-order)
+users/serializers.py:4:0: C0411: third party import "rest_framework_simplejwt.serializers.TokenObtainPairSerializer" should be placed before local import "models.User" (wrong-import-order)
+users/serializers.py:5:0: C0411: third party import "django.contrib.auth.password_validation.validate_password" should be placed before local import "models.User" (wrong-import-order)
+************* Module users.migrations.0005_alter_posts_text
+users/migrations/0005_alter_posts_text.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0005_alter_posts_text.py:1:0: C0103: Module name "0005_alter_posts_text" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0005_alter_posts_text.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.migrations.0004_alter_posts_text
+users/migrations/0004_alter_posts_text.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0004_alter_posts_text.py:1:0: C0103: Module name "0004_alter_posts_text" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0004_alter_posts_text.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.migrations.0001_initial
+users/migrations/0001_initial.py:35:0: C0301: Line too long (117/100) (line-too-long)
+users/migrations/0001_initial.py:45:0: C0301: Line too long (107/100) (line-too-long)
+users/migrations/0001_initial.py:114:0: C0301: Line too long (134/100) (line-too-long)
+users/migrations/0001_initial.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0001_initial.py:1:0: C0103: Module name "0001_initial" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0001_initial.py:12:0: C0115: Missing class docstring (missing-class-docstring)
+users/migrations/0001_initial.py:7:0: C0411: standard import "uuid" should be placed before third party imports "django.contrib.auth.validators", "django.core.files.storage", "django.db.models.deletion", "django.utils.timezone" (wrong-import-order)
+************* Module users.migrations.0003_alter_posts_image_alter_posts_text
+users/migrations/0003_alter_posts_image_alter_posts_text.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0003_alter_posts_image_alter_posts_text.py:1:0: C0103: Module name "0003_alter_posts_image_alter_posts_text" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0003_alter_posts_image_alter_posts_text.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.migrations.0006_delete_posts
+users/migrations/0006_delete_posts.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0006_delete_posts.py:1:0: C0103: Module name "0006_delete_posts" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0006_delete_posts.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.migrations.0002_alter_posts_image_alter_posts_text
+users/migrations/0002_alter_posts_image_alter_posts_text.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0002_alter_posts_image_alter_posts_text.py:1:0: C0103: Module name "0002_alter_posts_image_alter_posts_text" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0002_alter_posts_image_alter_posts_text.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module users.migrations.0007_alter_user_managers
+users/migrations/0007_alter_user_managers.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users/migrations/0007_alter_user_managers.py:1:0: C0103: Module name "0007_alter_user_managers" doesn't conform to snake_case naming style (invalid-name)
+users/migrations/0007_alter_user_managers.py:7:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module posts.apps
+posts/apps.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/apps.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module posts.urls
+posts/urls.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+************* Module posts.service
+posts/service.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/service.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+posts/service.py:9:11: E1101: Class 'Posts' has no 'DoesNotExist' member (no-member)
+posts/service.py:10:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValidationError(f'Post with id {post_id} not found') from exc' (raise-missing-from)
+posts/service.py:24:0: C0116: Missing function or method docstring (missing-function-docstring)
+posts/service.py:28:0: C0116: Missing function or method docstring (missing-function-docstring)
+posts/service.py:31:11: E1101: Class 'Posts' has no 'DoesNotExist' member (no-member)
+posts/service.py:32:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValidationError(f'Post with id {post_id} not found') from exc' (raise-missing-from)
+posts/service.py:35:0: C0116: Missing function or method docstring (missing-function-docstring)
+posts/service.py:39:0: C0116: Missing function or method docstring (missing-function-docstring)
+posts/service.py:53:11: E1101: Class 'Events' has no 'DoesNotExist' member (no-member)
+posts/service.py:54:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValidationError(f'Event with id {event_id} not found') from exc' (raise-missing-from)
+posts/service.py:61:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+posts/service.py:3:0: C0411: first party import "users.models.User" should be placed before local import "models.Posts" (wrong-import-order)
+************* Module posts.admin
+posts/admin.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/admin.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module posts.models
+posts/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/models.py:12:0: C0115: Missing class docstring (missing-class-docstring)
+posts/models.py:12:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+posts/models.py:25:0: C0115: Missing class docstring (missing-class-docstring)
+posts/models.py:32:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+posts/models.py:25:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+posts/models.py:46:0: C0115: Missing class docstring (missing-class-docstring)
+posts/models.py:62:0: C0115: Missing class docstring (missing-class-docstring)
+posts/models.py:78:4: C0115: Missing class docstring (missing-class-docstring)
+posts/models.py:78:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+posts/models.py:91:19: E1101: Instance of 'ManyToManyField' has no 'count' member (no-member)
+posts/models.py:3:0: C0411: third party import "django.core.files.storage.FileSystemStorage" should be placed before first party import "users.models.User"  (wrong-import-order)
+posts/models.py:4:0: C0411: third party import "django.conf.settings" should be placed before first party import "users.models.User"  (wrong-import-order)
+posts/models.py:5:0: C0411: third party import "django.db.models" should be placed before first party import "users.models.User"  (wrong-import-order)
+posts/models.py:6:0: C0411: third party import "django.utils.timezone" should be placed before first party import "users.models.User"  (wrong-import-order)
+************* Module posts.views
+posts/views.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/views.py:18:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:21:4: C0116: Missing function or method docstring (missing-function-docstring)
+posts/views.py:33:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:36:4: C0116: Missing function or method docstring (missing-function-docstring)
+posts/views.py:47:15: W0718: Catching too general exception Exception (broad-exception-caught)
+posts/views.py:53:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:108:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:119:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:125:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:132:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:145:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:157:0: C0115: Missing class docstring (missing-class-docstring)
+posts/views.py:160:0: W0613: Unused argument 'args' (unused-argument)
+posts/views.py:160:0: W0613: Unused argument 'kwargs' (unused-argument)
+posts/views.py:5:0: C0411: third party import "django.db.transaction" should be placed before local import "models.Posts" (wrong-import-order)
+posts/views.py:6:0: C0411: third party import "rest_framework.generics" should be placed before local import "models.Posts" (wrong-import-order)
+posts/views.py:7:0: C0411: third party import "rest_framework.exceptions.PermissionDenied" should be placed before local import "models.Posts" (wrong-import-order)
+posts/views.py:10:0: C0411: third party import "rest_framework.status" should be placed before local imports "models.Posts", "serializers.PostsSerializer", "service.toggle_event_rsvp" (wrong-import-order)
+posts/views.py:11:0: C0411: third party import "rest_framework.permissions.IsAuthenticated" should be placed before local imports "models.Posts", "serializers.PostsSerializer", "service.toggle_event_rsvp" (wrong-import-order)
+posts/views.py:12:0: C0411: third party import "rest_framework.generics.ListAPIView" should be placed before local imports "models.Posts", "serializers.PostsSerializer", "service.toggle_event_rsvp" (wrong-import-order)
+posts/views.py:14:0: C0411: third party import "django.utils.timezone" should be placed before local imports "models.Posts", "serializers.PostsSerializer", "service.toggle_event_rsvp", "service.toggle_post_like" (wrong-import-order)
+posts/views.py:15:0: C0411: third party import "django.db.models.Q" should be placed before local imports "models.Posts", "serializers.PostsSerializer", "service.toggle_event_rsvp", "service.toggle_post_like" (wrong-import-order)
+posts/views.py:6:0: C0412: Imports from package rest_framework are not grouped (ungrouped-imports)
+posts/views.py:14:0: C0412: Imports from package django are not grouped (ungrouped-imports)
+posts/views.py:14:0: W0611: Unused timezone imported from django.utils (unused-import)
+posts/views.py:15:0: W0611: Unused Q imported from django.db.models (unused-import)
+************* Module posts.serializers
+posts/serializers.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/serializers.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+posts/serializers.py:17:4: C0115: Missing class docstring (missing-class-docstring)
+posts/serializers.py:17:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+posts/serializers.py:21:4: C0116: Missing function or method docstring (missing-function-docstring)
+posts/serializers.py:37:0: C0115: Missing class docstring (missing-class-docstring)
+posts/serializers.py:48:4: C0115: Missing class docstring (missing-class-docstring)
+posts/serializers.py:48:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+posts/serializers.py:68:4: C0116: Missing function or method docstring (missing-function-docstring)
+posts/serializers.py:76:4: C0116: Missing function or method docstring (missing-function-docstring)
+posts/serializers.py:6:0: C0411: first party import "users.models.User" should be placed before local import "models.Posts" (wrong-import-order)
+************* Module posts.migrations.0002_event
+posts/migrations/0002_event.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/migrations/0002_event.py:1:0: C0103: Module name "0002_event" doesn't conform to snake_case naming style (invalid-name)
+posts/migrations/0002_event.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+posts/migrations/0002_event.py:4:0: C0411: standard import "uuid" should be placed before third party import "django.db.models.deletion" (wrong-import-order)
+************* Module posts.migrations.0001_initial
+posts/migrations/0001_initial.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/migrations/0001_initial.py:1:0: C0103: Module name "0001_initial" doesn't conform to snake_case naming style (invalid-name)
+posts/migrations/0001_initial.py:10:0: C0115: Missing class docstring (missing-class-docstring)
+posts/migrations/0001_initial.py:5:0: C0411: standard import "uuid" should be placed before third party imports "django.core.files.storage", "django.db.models.deletion" (wrong-import-order)
+************* Module posts.migrations.0003_events_delete_event
+posts/migrations/0003_events_delete_event.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+posts/migrations/0003_events_delete_event.py:1:0: C0103: Module name "0003_events_delete_event" doesn't conform to snake_case naming style (invalid-name)
+posts/migrations/0003_events_delete_event.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+posts/migrations/0003_events_delete_event.py:4:0: C0411: standard import "uuid" should be placed before third party import "django.db.models.deletion" (wrong-import-order)
+************* Module reviews.apps
+reviews/apps.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/apps.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module reviews.urls
+reviews/urls.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/urls.py:2:0: C0411: third party import "django.urls.path" should be placed before local import ".views" (wrong-import-order)
+************* Module reviews.admin
+reviews/admin.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/admin.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module reviews.tests
+reviews/tests.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/tests.py:1:0: W0611: Unused TestCase imported from django.test (unused-import)
+************* Module reviews.models
+reviews/models.py:26:0: C0301: Line too long (121/100) (line-too-long)
+reviews/models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/models.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/models.py:28:4: C0115: Missing class docstring (missing-class-docstring)
+reviews/models.py:28:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module reviews.views
+reviews/views.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/views.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/views.py:14:15: E1101: Class 'ReviewTeacher' has no 'objects' member (no-member)
+reviews/views.py:21:36: E0602: Undefined variable 'Teacher' (undefined-variable)
+reviews/views.py:25:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/views.py:26:15: E1101: Class 'ReviewTeacher' has no 'objects' member (no-member)
+reviews/views.py:38:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/views.py:39:15: E1101: Class 'ReviewTeacher' has no 'objects' member (no-member)
+reviews/views.py:50:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/views.py:51:15: E1101: Class 'ReviewTeacher' has no 'objects' member (no-member)
+reviews/views.py:56:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/views.py:61:15: E1101: Class 'ReviewTeacher' has no 'objects' member (no-member)
+reviews/views.py:4:0: C0411: third party import "rest_framework.exceptions.PermissionDenied" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:5:0: C0411: third party import "rest_framework.status" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:6:0: C0411: third party import "rest_framework.permissions.IsAuthenticated" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:7:0: C0411: third party import "django.db.transaction" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:8:0: C0411: third party import "rest_framework.views.APIView" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:9:0: C0411: third party import "rest_framework.response.Response" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:10:0: C0411: third party import "django.shortcuts.get_object_or_404" should be placed before local imports "serializers.ReviewsSerializer", "models.ReviewTeacher" (wrong-import-order)
+reviews/views.py:8:0: C0412: Imports from package rest_framework are not grouped (ungrouped-imports)
+reviews/views.py:10:0: C0412: Imports from package django are not grouped (ungrouped-imports)
+reviews/views.py:5:0: W0611: Unused status imported from rest_framework (unused-import)
+reviews/views.py:8:0: W0611: Unused APIView imported from rest_framework.views (unused-import)
+reviews/views.py:9:0: W0611: Unused Response imported from rest_framework.response (unused-import)
+************* Module reviews.serializers
+reviews/serializers.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+reviews/serializers.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+reviews/serializers.py:16:4: C0115: Missing class docstring (missing-class-docstring)
+reviews/serializers.py:16:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+reviews/serializers.py:21:17: E1101: Class 'ReviewTeacher' has no 'objects' member (no-member)
+reviews/serializers.py:6:0: C0411: first party import "users.models.User" should be placed before local import "models.ReviewTeacher" (wrong-import-order)
+reviews/serializers.py:2:0: W0611: Unused timezone imported from django.utils (unused-import)
+reviews/serializers.py:3:0: W0611: Unused URLValidator imported from django.core.validators (unused-import)
+reviews/serializers.py:4:0: W0611: Unused ValidationError imported from django.core.exceptions (unused-import)
+************* Module reviews.migrations.__init__
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0001_initial:[33:62]
+==users.migrations.0001_initial:[156:185]
+                (
+                    "image",
+                    models.ImageField(
+                        default=None,
+                        editable=False,
+                        storage=django.core.files.storage.FileSystemStorage(
+                            location="/djangoproject/media"
+                        ),
+                        upload_to="",
+                    ),
+                ),
+                (
+                    "likedBy",
+                    models.ManyToManyField(
+                        related_name="posts_likes", to=settings.AUTH_USER_MODEL
+                    ),
+                ),
+                (
+                    "postedBy",
+                    models.ForeignKey(
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="posts_postedBy",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+            ],
+        ),
+    ] (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0002_event:[18:35]
+==posts.migrations.0003_events_delete_event:[18:35]
+            fields=[
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("title", models.CharField(max_length=255, verbose_name="Title: ")),
+                (
+                    "event_date",
+                    models.DateTimeField(verbose_name="Event Date and Time:"),
+                ),
+                ("locate", models.CharField(max_length=512)),
+                ("postedAt", models.DateTimeField(auto_now_add=True)), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0002_event:[35:49]
+==posts.migrations.0003_events_delete_event:[44:58]
+                (
+                    "postedBy",
+                    models.ForeignKey(
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="events_postedBy",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+            ],
+            options={
+                "ordering": ["-event_date"],
+            },
+        ), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0001_initial:[18:32]
+==users.migrations.0001_initial:[138:152]
+        migrations.CreateModel(
+            name="Posts",
+            fields=[
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("likes", models.IntegerField(default=0)),
+                ("postedAt", models.DateTimeField(auto_now_add=True)), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0001_initial:[20:30]
+==posts.migrations.0003_events_delete_event:[18:28]
+            fields=[
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0002_event:[18:28]
+==users.migrations.0001_initial:[140:150]
+            fields=[
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==users.migrations.0002_alter_posts_image_alter_posts_text:[21:30]
+==users.migrations.0003_alter_posts_image_alter_posts_text:[19:28]
+                storage=django.core.files.storage.FileSystemStorage(
+                    location="/djangoproject/media"
+                ),
+                upload_to="",
+            ),
+        ),
+        migrations.AlterField(
+            model_name="posts",
+            name="text", (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.migrations.0002_event:[19:28]
+==users.migrations.0001_initial:[85:94]
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==users.migrations.0001_initial:[159:167]
+==users.migrations.0003_alter_posts_image_alter_posts_text:[17:25]
+                        default=None,
+                        editable=False,
+                        storage=django.core.files.storage.FileSystemStorage(
+                            location="/djangoproject/media"
+                        ),
+                        upload_to="",
+                    ),
+                ), (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==users.migrations.0002_alter_posts_image_alter_posts_text:[10:17]
+==users.migrations.0003_alter_posts_image_alter_posts_text:[10:17]
+    ]
 
------------------------------------
-Your code has been rated at 8.46/10
+    operations = [
+        migrations.AlterField(
+            model_name="posts",
+            name="image",
+            field=models.ImageField( (duplicate-code)
+reviews/migrations/__init__.py:1:0: R0801: Similar lines in 2 files
+==posts.views:[43:48]
+==users.views:[74:82]
+            return Response({"message": message}, status=200)
+
+        # Trata apenas erros de negócio (que o service levantou ao receber os dados)
+        except ValidationError as e:
+            return Response({"error": e.detail}, status=400)
+
+        except Exception as e:
+            return Response( (duplicate-code)
+
+------------------------------------------------------------------
+Your code has been rated at 5.56/10 (previous run: 5.56/10, +0.00)
 
 
 
 # --- metadata ---
 tool: pylint
-command: (cd "../src/djangoproject/" && pylint djangoproject)
-exit_code: 16
-runtime_seconds: 3
+command: (cd "../src/djangoproject/" && pylint djangoproject users posts reviews)
+exit_code: 30
+runtime_seconds: 9
 report_path: ../refactoring/reports/sprint2/pylint-sprint2.txt
