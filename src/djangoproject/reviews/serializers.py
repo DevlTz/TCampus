@@ -28,7 +28,7 @@ class ReviewsSerializer(serializers.ModelSerializer):
         return review
     
 class TeacherDetailSerializer(serializers.ModelSerializer):
-    reviews = ReviewsSerializer(many=True, read_only=True)
+    reviews = ReviewsSerializer(many=True, read_only=True, source='reviews_as_teacher')
     average_score = serializers.SerializerMethodField()
 
     class Meta:
@@ -36,4 +36,4 @@ class TeacherDetailSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'reviews', 'average_score']
 
     def get_average_score(self, obj):
-        return obj.reviews.aggregate(avg=Avg('score'))['avg']
+        return obj.reviews_as_teacher.aggregate(avg=Avg('score'))['avg']
