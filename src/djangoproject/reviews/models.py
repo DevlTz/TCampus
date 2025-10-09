@@ -1,14 +1,17 @@
 from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
+from users.models import User
 
 MAX_SCORE = 10
 
 
 class ReviewTeacher(models.Model):
     teacher = models.ForeignKey(
-        "teachers.Teacher", on_delete=models.CASCADE, related_name="reviews"
-    )
+    settings.AUTH_USER_MODEL,
+    on_delete=models.CASCADE,
+    related_name="teacher_reviews_done",
+)
     student = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
