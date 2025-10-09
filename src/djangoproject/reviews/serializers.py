@@ -4,6 +4,7 @@ from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 from .models import ReviewTeacher
 from users.models import User
+from django.db.models import Avg
 
 
 class ReviewsSerializer(serializers.ModelSerializer):
@@ -25,3 +26,14 @@ class ReviewsSerializer(serializers.ModelSerializer):
         )
         review.save()
         return review
+    
+class TeacherDetailSerializer(serializers.ModelSerializer):
+    reviews = ReviewsSerializer(many=True, read_only=True)
+    average_score = serializers.SerializerMethodField()
+
+    class Meta:
+        model = User
+        fields = ['id', 'name', 'reviews', 'average_score']
+
+    def get_average_score(self, obj):
+        return obj.reviews.aggregate(avg=Avg('score'))['avg']

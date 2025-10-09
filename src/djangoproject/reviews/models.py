@@ -3,7 +3,7 @@ from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
 from users.models import User
 
-MAX_SCORE = 10
+MAX_SCORE = 5
 
 
 class ReviewTeacher(models.Model):
@@ -44,3 +44,5 @@ class ReviewTeacher(models.Model):
 
     def __str__(self):
         return f"{self.teacher} — {self.student} ({self.score})"
+    
+

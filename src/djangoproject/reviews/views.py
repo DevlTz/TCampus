@@ -9,6 +9,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from users.models import User 
+from django.db.models import Avg
+from .serializers import TeacherDetailSerializer
 
 class ReviewCreateAPIView(generics.CreateAPIView):
     queryset = ReviewTeacher.objects.all()
@@ -60,3 +62,14 @@ class ReviewListUniqueAPIView(generics.ListAPIView):
     def get_queryset(self):
         return ReviewTeacher.objects.filter(teacher_id=self.kwargs["pk"])
 
+from django.db.models import Avg
+
+class ProfessorDetailAPIView(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = TeacherDetailSerializer  
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        professor = self.get_object()
+        context['average_score'] = professor.reviews.aggregate(Avg('score'))['score__avg']
+        return context
