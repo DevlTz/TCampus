@@ -27,6 +27,13 @@ class PostsSerializer(serializers.ModelSerializer):
             postedBy=validated_data["postedBy"],
         )
         return post
+    
+    def validate(self, data):
+        if not data.get("text") and not data.get("image"):
+            raise serializers.ValidationError(
+                "The post must contain at least a text or a image"
+            )
+        return data
 
 
 class EventsSerializer(serializers.ModelSerializer):
