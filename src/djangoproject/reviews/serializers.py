@@ -1,7 +1,4 @@
 from rest_framework import serializers
-from django.utils import timezone
-from django.core.validators import URLValidator
-from django.core.exceptions import ValidationError
 from .models import ReviewTeacher
 from users.models import User
 from django.db.models import Avg
@@ -28,7 +25,7 @@ class ReviewsSerializer(serializers.ModelSerializer):
         return review
     
 class TeacherDetailSerializer(serializers.ModelSerializer):
-    reviews = ReviewsSerializer(many=True, read_only=True, source='reviews_as_teacher')
+    reviews = ReviewsSerializer(many=True, read_only=True, source='reviews_received')
     average_score = serializers.SerializerMethodField()
 
     class Meta:
@@ -36,4 +33,4 @@ class TeacherDetailSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'reviews', 'average_score']
 
     def get_average_score(self, obj):
-        return obj.reviews_as_teacher.aggregate(avg=Avg('score'))['avg']
+        return obj.reviews_received.aggregate(avg=Avg('score'))['avg']

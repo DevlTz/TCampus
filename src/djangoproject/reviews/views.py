@@ -55,7 +55,7 @@ class ReviewListAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
 
-class ReviewListUniqueAPIView(generics.ListAPIView):
+class ReviewListProfessorAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = ReviewsSerializer
 
@@ -67,9 +67,3 @@ from django.db.models import Avg
 class ProfessorDetailAPIView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = TeacherDetailSerializer  
-
-    def get_serializer_context(self):
-        context = super().get_serializer_context()
-        professor = self.get_object()
-        context['average_score'] = professor.reviews.aggregate(Avg('score'))['score__avg']
-        return context
