@@ -3,11 +3,12 @@ from django.utils import timezone
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 from .models import Posts, Events
+from .validator import validate_image_size
 from users.models import User
 
 
 class PostsSerializer(serializers.ModelSerializer):
-    image = serializers.FileField()
+    image = serializers.FileField(required=False, validators=[validate_image_size])
     postedBy = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     likedBy = serializers.PrimaryKeyRelatedField(
         required=False, many=True, queryset=User.objects.all()
@@ -18,20 +19,21 @@ class PostsSerializer(serializers.ModelSerializer):
         model = Posts
         fields = "__all__"
 
-    def validate_image(self, image):
-        if image.size > 10 * 10 * 1024:
-            raise serializers.ValidationError("Very large file. Maximum allowed: 10MB.")
-
-        return image
-
+    
     def create(self, validated_data):
         post = Posts.objects.create(
-            image=validated_data["image"],
+            image=validated_data.get("image"),
             text=validated_data["text"],
             postedBy=validated_data["postedBy"],
         )
-        post.save()
         return post
+    
+    def validate(self, data):
+        if not data.get("text") and not data.get("image"):
+            raise serializers.ValidationError(
+                "The post must contain at least a text or a image"
+            )
+        return data
 
 
 class EventsSerializer(serializers.ModelSerializer):
