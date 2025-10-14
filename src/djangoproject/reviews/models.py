@@ -2,12 +2,12 @@ from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-MAX_SCORE = 5
+MAX_SCORE = 10
 
 
 class BaseReview(models.Model):
     score = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(5)],
+        validators=[MinValueValidator(1), MaxValueValidator({MAX_SCORE})],
         help_text="Integer rating 1-{MAX_SCORE}"
     )
     comment = models.TextField(blank=True, null=True)
