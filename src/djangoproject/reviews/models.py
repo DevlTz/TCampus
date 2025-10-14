@@ -5,25 +5,32 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 MAX_SCORE = 10
 
 
-class ReviewTeacher(models.Model):
+class BaseReview(models.Model):
+    score = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator({MAX_SCORE})],
+        help_text="Integer rating 1-{MAX_SCORE}"
+    )
+    comment = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+     # to know if the review was updated - or edited
+    # is_approved = models.BooleanField(default=True)        # first goes to staff - idk if it's a great deal... (maybe?)
+
+    class Meta:
+        abstract = True 
+
+    def __str__(self):
+        return f"{self.student} ({self.score})"
+
+class ReviewTeacher(BaseReview):
     teacher = models.ForeignKey(
-        "teachers.Teacher", on_delete=models.CASCADE, related_name="reviews"
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="reviews_received",
     )
     student = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name="teacher_reviews",
+        related_name="reviews_made",
     )
-    score = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(MAX_SCORE)],
-        help_text=f"Integer rating 1-{MAX_SCORE}",
-    )
-    comment = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(
-        auto_now=True
-    )  # to know if the review was updated - or edited
-    # is_approved = models.BooleanField(default=True)        # first goes to staff - idk if it's a great deal... (maybe?)
 
     class Meta:
         verbose_name = "Teacher Review"
@@ -41,3 +48,4 @@ class ReviewTeacher(models.Model):
 
     def __str__(self):
         return f"{self.teacher} — {self.student} ({self.score})"
+        

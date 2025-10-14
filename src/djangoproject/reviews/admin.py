@@ -6,4 +6,4 @@ from .models import ReviewTeacher
 
 @admin.register(ReviewTeacher)
 class PostsAdmin(admin.ModelAdmin):
-    list_display = ["teacher", "score", "created_at"]
+    list_display = ["teacher", "student", "score", "created_at"]

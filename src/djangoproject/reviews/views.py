@@ -8,18 +8,20 @@ from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
-
+from users.models import User 
+from django.db.models import Avg
+from .serializers import TeacherDetailSerializer
 
 class ReviewCreateAPIView(generics.CreateAPIView):
     queryset = ReviewTeacher.objects.all()
     serializer_class = ReviewsSerializer
     permission_classes = [IsAuthenticated]
-    lookup_field = "pk"
 
     @transaction.atomic
     def perform_create(self, serializer):
-        teacher = get_object_or_404(Teacher, pk=self.kwargs["pk"])
+        teacher = get_object_or_404(User, pk=self.kwargs["pk"]) 
         serializer.save(student=self.request.user, teacher=teacher)
+
 
 
 class ReviewUpdateAPIView(generics.UpdateAPIView):
@@ -53,9 +55,15 @@ class ReviewListAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
 
-class ReviewListUniqueAPIView(generics.ListAPIView):
+class ReviewListProfessorAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = ReviewsSerializer
 
     def get_queryset(self):
-        return ReviewTeacher.objects.filter(id=self.kwargs["pk"])
+        return ReviewTeacher.objects.filter(teacher_id=self.kwargs["pk"])
+
+from django.db.models import Avg
+
+class ProfessorDetailAPIView(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = TeacherDetailSerializer  
