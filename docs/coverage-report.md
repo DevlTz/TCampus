@@ -11,7 +11,7 @@ O projeto atingiu as métricas de qualidade exigidas para o MVP, focando testes 
 | Métrica | Atual | Meta | Status |
 | :--- | :---: | :---: | :---: |
 | **Cobertura de Linhas** | **84%** | 70% | ✅ |
-| **Cobertura de Branches** | **76%** | 60% | ✅ |
+| **Cobertura de Branches** | **100%** | 60% | ✅ |
 | **Testes Totais** | **42** | 10 | ✅ |
 
 ---
