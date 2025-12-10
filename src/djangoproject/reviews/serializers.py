@@ -5,11 +5,9 @@ from django.db.models import Avg
 
 
 class ReviewsSerializer(serializers.ModelSerializer):
-    teacher = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
-    student = serializers.PrimaryKeyRelatedField(
-        required=True, queryset=User.objects.all()
-    )
-    score = serializers.IntegerField(required=True)
+    teacher = serializers.PrimaryKeyRelatedField(read_only=True)
+    student = serializers.PrimaryKeyRelatedField(read_only=True)    
+    score = serializers.IntegerField(required=True, min_value=1, max_value=10)
 
     class Meta:
         model = ReviewTeacher
@@ -20,8 +18,8 @@ class ReviewsSerializer(serializers.ModelSerializer):
             score=validated_data["score"],
             teacher=validated_data["teacher"],
             student=validated_data["student"],
+            comment=validated_data.get("comment", "")
         )
-        review.save()
         return review
     
 class TeacherDetailSerializer(serializers.ModelSerializer):
@@ -30,7 +28,7 @@ class TeacherDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['id', 'name', 'reviews', 'average_score']
+        fields = ['id', 'username', 'reviews', 'average_score']
 
     def get_average_score(self, obj):
         return obj.reviews_received.aggregate(avg=Avg('score'))['avg']
