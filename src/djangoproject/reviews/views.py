@@ -1,16 +1,15 @@
-from rest_framework import generics
-from .serializers import ReviewsSerializer
-from .models import ReviewTeacher
-from rest_framework.exceptions import PermissionDenied
-from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
-from django.db import transaction
-from rest_framework.views import APIView
-from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
-from users.models import User 
+from django.db import transaction
 from django.db.models import Avg
-from .serializers import TeacherDetailSerializer
+
+from rest_framework import generics, status
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.exceptions import PermissionDenied
+from rest_framework.response import Response
+
+from users.models import User 
+from .models import ReviewTeacher
+from .serializers import ReviewsSerializer, TeacherDetailSerializer
 
 class ReviewCreateAPIView(generics.CreateAPIView):
     queryset = ReviewTeacher.objects.all()
@@ -21,7 +20,6 @@ class ReviewCreateAPIView(generics.CreateAPIView):
     def perform_create(self, serializer):
         teacher = get_object_or_404(User, pk=self.kwargs["pk"]) 
         serializer.save(student=self.request.user, teacher=teacher)
-
 
 
 class ReviewUpdateAPIView(generics.UpdateAPIView):
@@ -56,14 +54,13 @@ class ReviewListAPIView(generics.ListAPIView):
 
 
 class ReviewListProfessorAPIView(generics.ListAPIView):
-    permission_classes = [IsAuthenticated]
     serializer_class = ReviewsSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return ReviewTeacher.objects.filter(teacher_id=self.kwargs["pk"])
 
-from django.db.models import Avg
 
 class ProfessorDetailAPIView(generics.RetrieveAPIView):
     queryset = User.objects.all()
-    serializer_class = TeacherDetailSerializer  
+    serializer_class = TeacherDetailSerializer

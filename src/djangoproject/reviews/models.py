@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -6,15 +7,15 @@ MAX_SCORE = 10
 
 
 class BaseReview(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    
     score = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator({MAX_SCORE})],
-        help_text="Integer rating 1-{MAX_SCORE}"
+        validators=[MinValueValidator(1), MaxValueValidator(MAX_SCORE)],
+        help_text=f"Integer rating 1-{MAX_SCORE}"
     )
     comment = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-     # to know if the review was updated - or edited
-    # is_approved = models.BooleanField(default=True)        # first goes to staff - idk if it's a great deal... (maybe?)
 
     class Meta:
         abstract = True 
@@ -48,4 +49,3 @@ class ReviewTeacher(BaseReview):
 
     def __str__(self):
         return f"{self.teacher} — {self.student} ({self.score})"
-        

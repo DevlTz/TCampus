@@ -2,7 +2,7 @@
 # Ignora pastas de ambientes virtuais comuns e arquivos de variáveis de ambiente.
 .venv/
 venv/
-.env
+*.env
 .eggs/
 instance/
 
