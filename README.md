@@ -110,66 +110,146 @@ Maintain test coverage on critical modules and record coverage metrics in CI.
 
 ```
 TCampus/
-├─ .gitignore
-├─ APACHE-2.0-HEADER.md
-├─ AUTHORS.md
-├─ CONTRIBUTING.md
-├─ LICENSE                # BSL 1.1 (code)
-├─ LICENSE-DOCS           # CC BY-NC-SA 4.0 (documentation)
-├─ NOTICE
-├─ README.md
-├─ refactoring/
-│  ├─ reports/
-│  ├─ before-after-examples/
-│  ├─ code-smells-identified.md
-│  └─ refactoring-log.md
-│  └─ docs/
-│     ├─ Arq_Diagram.png
-│     └─ ERD_Diagram.png
-├─ requirements.txt
-├─ requirements-dev.txt
-├─ src/
-│  ├─ .gitignore
-│  ├─ Dockerfile
-│  ├─ djangoproject/
-│  │  ├─ djangoproject/
-│  │  │  ├─ __init__.py
-│  │  │  ├─ asgi.py
-│  │  │  ├─ settings.py
-│  │  │  ├─ urls.py
-│  │  │  └─ wsgi.py
-│  │  ├─ manage.py
-│  │  ├─ posts/
-│  │  │  ├─ __init__.py
-│  │  │  ├─ admin.py
-│  │  │  ├─ apps.py
-│  │  │  ├─ migrations/
-│  │  │  │  ├─ 0001_initial.py
-│  │  │  │  ├─ ...
-│  │  │  │  └─ __init__.py
-│  │  │  ├─ models.py
-│  │  │  ├─ serializers.py
-│  │  │  ├─ tests.py
-│  │  │  ├─ urls.py
-│  │  │  └─ views.py
-│  │  └─ users/
-│  │     ├─ __init__.py
-│  │     ├─ admin.py
-│  │     ├─ apps.py
-│  │     ├─ migrations/
-│  │     │  ├─ 0001_initial.py
-│  │     │  ├─ 0002_auto_...
-│  │     │  ├─ ...
-│  │     │  └─ 0007_alter_user_managers.py
-│  │     ├─ models.py
-│  │     ├─ serializers.py
-│  │     ├─ tests.py
-│  │     ├─ urls.py
-│  │     └─ views.py
-│  ├─ docker-compose.yml
-│  ├─ manage.py
-└─ tools/
-   └─ run-quality.sh
+.
+├── APACHE-2.0-HEADER.md
+├── AUTHORS.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── LICENSE_DOCS
+├── NOTICE
+├── README.md
+├── docs
+│   ├── Arq_Diagram.png
+│   ├── ERD_Diagram.png
+│   ├── Visão do Produto.pdf
+│   ├── coverage-report.md
+│   └── testing-report.md
+├── refactoring
+│   ├── before-after-examples
+│   │   ├── dead-code-elimination
+│   │   │   ├── after_test.py
+│   │   │   ├── after_user-serializer.py
+│   │   │   ├── before_test.py
+│   │   │   └── before_user-serializer.py
+│   │   ├── duplicate-code-elimination
+│   │   │   ├── after_toggle_follow_user.py
+│   │   │   ├── after_toggle_post_like.py
+│   │   │   ├── before_follow.py
+│   │   │   ├── before_like.py
+│   │   │   ├── before_unfollow.py
+│   │   │   ├── before_unlike.py
+│   │   │   └── explication.md
+│   │   ├── model-example.txt
+│   │   ├── srp_violation
+│   │   │   ├── after_posts_models.py
+│   │   │   ├── after_posts_views.py
+│   │   │   ├── before_posts_models.py
+│   │   │   └── before_posts_views.py
+│   │   └── unused-argument-refactor
+│   │       ├── after_unused.py
+│   │       └── before_unused.py
+│   ├── code-smells-identified.md
+│   ├── quality-metrics.md
+│   ├── refactoring-log.md
+│   └── reports
+│       ├── sprint1
+│       │   ├── flake8-report1.txt
+│       │   ├── pylint-report1.txt
+│       │   ├── radon_cc-report1.txt
+│       │   ├── radon_mi-report1.txt
+│       │   ├── radon_raw1.txt
+│       │   └── vultures-report1.txt
+│       └── sprint2
+│           ├── black-sprint2.txt
+│           ├── flake8-sprint2.txt
+│           ├── pylint-sprint2.txt
+│           ├── radon-cc-sprint2.txt
+│           ├── radon-mi-sprint2.txt
+│           ├── radon-raw-sprint2.txt
+│           ├── summary.txt
+│           └── vulture-sprint2.txt
+├── requirements-dev.txt
+├── src
+│   ├── Dockerfile
+│   ├── djangoproject
+│   │   ├── djangoproject
+│   │   │   ├── __init__.py
+│   │   │   ├── asgi.py
+│   │   │   ├── settings.py
+│   │   │   ├── urls.py
+│   │   │   └── wsgi.py
+│   │   ├── manage.py
+│   │   ├── media
+│   │   │   ├── some *.gif files
+│   │   ├── posts
+│   │   │   ├── __init__.py
+│   │   │   ├── admin.py
+│   │   │   ├── apps.py
+│   │   │   ├── migrations
+│   │   │   │   ├── 0001_initial.py
+│   │   │   │   ├── 0002_event.py
+│   │   │   │   ├── 0003_events_delete_event.py
+│   │   │   │   └── __init__.py
+│   │   │   ├── models.py
+│   │   │   ├── serializers.py
+│   │   │   ├── service.py
+│   │   │   ├── tests.py
+│   │   │   ├── urls.py
+│   │   │   ├── validator.py
+│   │   │   └── views.py
+│   │   ├── requirements.txt
+│   │   ├── reviews
+│   │   │   ├── __init__.py
+│   │   │   ├── admin.py
+│   │   │   ├── apps.py
+│   │   │   ├── migrations
+│   │   │   │   ├── 0001_initial.py
+│   │   │   │   └── __init__.py
+│   │   │   ├── models.py
+│   │   │   ├── serializers.py
+│   │   │   ├── urls.py
+│   │   │   └── views.py
+│   │   ├── tests
+│   │   │   ├── __init__.py
+│   │   │   ├── coverage_results
+│   │   │   │   └── index.html
+│   │   │   └── unit
+│   │   │       ├── __init__.py
+│   │   │       ├── posts
+│   │   │       │   ├── __init__.py
+│   │   │       │   ├── test_managers.py
+│   │   │       │   └── test_service.py
+│   │   │       ├── reviews
+│   │   │       │   ├── __init__.py
+│   │   │       │   └── test_service.py
+│   │   │       └── users
+│   │   │           ├── __init__.py
+│   │   │           └── test_users_views.py
+│   │   └── users
+│   │       ├── __init__.py
+│   │       ├── admin.py
+│   │       ├── apps.py
+│   │       ├── migrations
+│   │       │   ├── 0001_initial.py
+│   │       │   ├── 0002_alter_posts_image_alter_posts_text.py
+│   │       │   ├── 0003_alter_posts_image_alter_posts_text.py
+│   │       │   ├── 0004_alter_posts_text.py
+│   │       │   ├── 0005_alter_posts_text.py
+│   │       │   ├── 0006_delete_posts.py
+│   │       │   ├── 0007_alter_user_managers.py
+│   │       │   └── __init__.py
+│   │       ├── models.py
+│   │       ├── serializers.py
+│   │       ├── service.py
+│   │       ├── tests.py
+│   │       ├── urls.py
+│   │       └── views.py
+│   ├── docker-compose.yml
+│   ├── manage.py
+│   └── requirements.txt
+└── tools
+    ├── README.md
+    └── run-quality.sh
 ```
 ---
 ## Contributing
