@@ -83,15 +83,3 @@ class ToggleFollowUserView(APIView):
                 {"error": f"An unexpected server error occurred: {str(e)}"}, status=500
             )
 
-
-class StatusUser(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        user = request.user
-        status = {
-            "username": user.username,
-            "total_followers": user.total_followers,
-            "total_following": user.total_following,
-        }
-        return Response(status)
