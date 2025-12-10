@@ -229,4 +229,3 @@ class EventServiceTests(TestCase):
         # Act / Assert
         with self.assertRaises(ValidationError):
             service.toggle_event_rsvp(self.attendee, missing_id, "join")
-
