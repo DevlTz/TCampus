@@ -43,7 +43,9 @@ class EventsSerializer(serializers.ModelSerializer):
         source="postedBy.get_full_name", read_only=True
     )
     event_date = serializers.DateTimeField(required=True)
-    total_participants = serializers.IntegerField(read_only=True)
+    total_participants = serializers.IntegerField(
+        source="total_participants", read_only=True
+    )
 
     class Meta:
         model = Events

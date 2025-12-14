@@ -117,7 +117,7 @@ class EventCreateAPIView(generics.CreateAPIView):
 
 
 class EventListAPIView(generics.ListAPIView):
-    queryset = Events.objects.select_related('postedBy').order_by("-postedAt")
+    queryset = Events.objects.all().order_by("-postedAt")
     serializer_class = EventsSerializer
     permission_classes = [IsAuthenticated]
 
