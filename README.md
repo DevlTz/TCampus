@@ -93,14 +93,47 @@ Example (local):
 
 ---
 
-## Testing
+## Tests & Quality
+
+This project adheres to strict software quality standards, including automated testing, code coverage analysis, and performance monitoring.
+
+### 1. Running the Test Suite
+To execute all unit and integration tests:
 
 ```bash
-# run tests with pytest
-pytest
-# or with manage.py
-python manage.py test
+# Activate your virtual environment first
+source .venv/bin/activate  # Linux/Mac
+# or
+.venv\Scripts\activate     # Windows
+
+# Run tests
+python -m pytest
 ```
+
+### 2. Coverage Report
+To generate the code coverage report:
+
+```bash
+coverage run -m pytest
+coverage report -m
+# To generate HTML report: coverage html
+```
+
+### 3. Performance Test (N+1 Queries)
+To execute the specific performance test that validates database optimization:
+
+```bash
+# It is necessary to manually inject the test key
+SECRET_KEY="test-performance-key" python -m pytest tests/unit/posts/test_perfomance_task.py -s
+```
+
+### 4. Technical Documentation (Unit 3 Delivery)
+The detailed documentation required for Unit 3 is located in the `docs/` folder:
+
+- [Testing & Quality Report](./docs/testing-report.md)
+- [Debugging Log](./docs/debugging-log.md)
+- [Performance Analysis](./docs/performance-analysis.md)
+- [Memory Analysis](./docs/memory-analysis.md)
 
 Maintain test coverage on critical modules and record coverage metrics in CI.
 
